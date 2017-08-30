@@ -1,5 +1,6 @@
 ---
 title: Startup Stack - tutorials, videos, books
+permalink: startup-stack-resources
 ---
 
 ## Domain names
@@ -8,6 +9,7 @@ title: Startup Stack - tutorials, videos, books
 ## Website/blog/...
 
 1. [awesome jekyll themes](https://github.com/planetjekyll/awesome-jekyll-themes)
+1. [static sites dynamic](http://staticman.net)
 
 ## Payment, Subscription, ecommerce
 
