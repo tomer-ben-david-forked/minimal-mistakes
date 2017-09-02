@@ -134,3 +134,79 @@ Martin Odersky says [Questioning FP](https://webcache.googleusercontent.com/sear
 **Conclusion**
 
 I think we have covered the basics terms here, `map`, `functor`, `lambda`, and discussed a little bit of impurity and how it goes along with FP.  Stay tuned for more items on our terminology list.
+
+# Slide Version: Scala, Lambda, Map
+
+---
+
+# Lambda
+
+---
+
+# Functor
+
+---
+
+# Wikipedia on Lambda 
+
+>Anonymous functions originate in the work of Alonzo Church in his invention of the lambda calculus in 1936
+
+---
+
+# What can we learn on lambda
+
+1. `lambda`
+1. `lambda calculus`
+1. `lambda`
+
+---
+
+# Stackoverflow answer with 812 upvotes
+
+>Lambda comes from the Lambda Calculus and refers to anonymous functions in programming
+
+---
+
+# Map
+
+---
+
+# Hey I just wrote a map function, what does it do?
+
+---
+
+# Map for scala list
+
+```scala
+final def map[B](f: (A) ⇒ B): List[B]
+```
+
+---
+
+# Haskell list map
+
+```haskell
+map :: (a -> b) -> [a] -> [b]
+```
+
+---
+
+# Ruby map
+
+```ruby
+[1,2,3,4].map {|i| i + 1}
+# => [2, 3, 4, 5]
+```
+
+---
+
+# Closure map
+
+```lisp
+(map #(+ % 1) [1 2 3 4])
+;; => (2 3 4 5)
+```
+
+---
+
+# Summary map, lambda next item is functor!
