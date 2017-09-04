@@ -21,13 +21,11 @@ permalink: startup-stack-resources
 1. [levels.io bootstraping](https://levels.io/bootstrapping/)
 1. [Many resources for startups](https://siftery.com)
 
-## Free images
+## UI and graphic design
 
 1. [https://pixabay.com](https://pixabay.com)
 1. [https://unsplash.com/](https://unsplash.com/)
-
-## UI
-
+1. [Canva be your own graphic designer](https://www.canva.com)
 1. [todomvc Choose UI framework](http://todomvc.com/)
 1. [Bootstrap Components Snippets](bootsnipp.com)
 1. [flatuicolors](flatuicolors.com)
