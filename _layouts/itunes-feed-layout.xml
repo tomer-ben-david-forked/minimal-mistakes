@@ -3,7 +3,7 @@
   <channel>
     <title>{{ site.podcast.title }}</title>
     <link>{{ site.podcast.link }}</link>
-    <itunes:author>{{ site.author }}</itunes:author>
+    <itunes:author>{{ site.author.name }}</itunes:author>
     <copyright>{{ site.license }}</copyright>
     <language>en-us</language>
     <pubDate>{{ site.time | date_to_rfc822 }}</pubDate>
@@ -19,7 +19,7 @@
     <description>{{ site.podcast.summary }}</description>
     <itunes:summary>{{ site.podcast.summary }}</itunes:summary>
     <itunes:owner>
-      <itunes:name>{{ site.author }}</itunes:name>
+      <itunes:name>{{ site.author.name }}</itunes:name>
       <itunes:email>{{ site.email }}</itunes:email>
     </itunes:owner>
     <generator>Jekyll v{{ jekyll.version }}</generator>
@@ -27,7 +27,7 @@
     <item>
       <title>{{ post.number }} &mdash; {{ post.title }}</title>
       <itunes:explicit>Yes</itunes:explicit>
-      <itunes:author>{{ site.author }}</itunes:author>
+      <itunes:author>{{ site.author.name }}</itunes:author>
       <itunes:duration>{{ post.duration }}</itunes:duration>
       <pubDate>{{ post.date | date_to_rfc822 }}</pubDate>
       <itunes:subtitle></itunes:subtitle>
