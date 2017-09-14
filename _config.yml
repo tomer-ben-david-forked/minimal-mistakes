@@ -245,3 +245,18 @@ defaults:
       comments: true
       share: true
       related: true
+
+# Podcast see: https://github.com/taxigy/itunes-jekyll-template
+
+# Misc
+licence: All Right Reserved
+# Podcast
+podcast:
+  title: Software Engineering TechCast
+  art: https://upload.wikimedia.org/wikipedia/commons/e/e9/Serial_Podcast.jpg
+  category: Education
+  subcategories:
+  - Training
+  subtitle: Software Engineering Training
+  summary: >
+    This is software engineering podcast where we discuss salability, functional programming, api design, UI, machine learning.

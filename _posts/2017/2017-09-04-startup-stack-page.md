@@ -11,6 +11,10 @@ permalink: startup-stack-resources
 1. [awesome jekyll themes](https://github.com/planetjekyll/awesome-jekyll-themes)
 1. [static sites dynamic](http://staticman.net)
 
+### Static websites
+
+1 [jekyll podcasting](https://github.com/taxigy/itunes-jekyll-template)
+
 ## Payment, Subscription, ecommerce
 
 1. [https://gumroad.com](https://gumroad.com)
