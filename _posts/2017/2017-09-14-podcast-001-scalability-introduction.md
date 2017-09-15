@@ -1,5 +1,5 @@
 ---
-title: Podcast 001 Episode - Scalability Introduction
+title: Daily Programmer Podcast Episode 001 - Scalability Introduction
 permalink: podcast-001-2017-09-14-scalability-introduction
 category: podcast
 date: 2017-09-14 12:00:00
@@ -11,5 +11,5 @@ mp3: https://archive.org/download/001DevPodcastScalabilityIntroduction/001-dev-p
 
 First episode in a series about scalability
 
-<iframe src="https://archive.org/download/001DevPodcastScalabilityIntroduction/001-dev-podcast-Scalability-Introduction.mp3" width="500" height="80" frameborder="0" webkitallowfullscreen="true" mozallowfullscreen="true" allowfullscreen></iframe>
+<iframe src="https://archive.org/download/001DevPodcastScalabilityIntroduction/001-dev-podcast-Scalability-Introduction.mp3" width="300" height="50" frameborder="0" webkitallowfullscreen="true" mozallowfullscreen="true" allowfullscreen></iframe>
 <a href="https://archive.org/download/001DevPodcastScalabilityIntroduction/001-dev-podcast-Scalability-Introduction.mp3">Download</a>
