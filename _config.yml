@@ -257,6 +257,6 @@ podcast:
   category: Education
   subcategories:
   - Training
-  subtitle: Software Engineering Training
+  subtitle: For Software Engineers
   summary: >
     This is software engineering podcast where we discuss scalability, functional programming, api design, UI, machine learning.
