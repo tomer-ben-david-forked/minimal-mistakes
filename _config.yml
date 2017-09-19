@@ -252,7 +252,7 @@ defaults:
 licence: All Right Reserved
 # Podcast
 podcast:
-  title: Programmers Daily
+  title: For Software Engineers
   art: https://upload.wikimedia.org/wikipedia/commons/e/e9/Serial_Podcast.jpg
   category: Education
   subcategories:
