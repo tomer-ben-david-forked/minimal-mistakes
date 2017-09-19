@@ -20,8 +20,6 @@ You can publish and consume for the same `topic` on multiple brokers.
 topic1/partition1 (can be on broker1 within this you maintani order for consumers meaning first in will be first out for consumer)
 topic1/partition2 (can be on broker2)
 
-
-
 ## Step 3: Storage
 
 1. Each partition corresponds to logical log.

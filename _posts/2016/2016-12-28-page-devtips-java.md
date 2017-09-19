@@ -18,7 +18,10 @@ Arrays.copyOfRange([1,2,3], 1, [1,2,3].length);  // subarray from 1 to length ar
 **Initialize 2 dim array**
 
 ```java
-int[][] arr = new int[2][2];
+int[][] input = new int[][] {
+    { 1, 2, 3, 4 },
+    { 2, 2, 3, 2 }
+};
 ```
 
 **print two dim array**
