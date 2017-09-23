@@ -1,7 +1,7 @@
 ---
 title: The Leave at 5pm efficient programmer - introduction
 permalink: /tips-for-you-to-find-cheap-flights/
-published: false
+published: true
 ---
 
 **This is how you find damn cheap flights!**
