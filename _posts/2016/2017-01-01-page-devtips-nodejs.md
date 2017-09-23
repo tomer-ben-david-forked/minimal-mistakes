@@ -5,6 +5,19 @@ date:   2017-01-01 22:18:00
 categories: cheatsheet,nodejs
 comments: true
 ---
+# Setup a new project
+
+```bash
+npm init # => first step to create an empty project. (we choose app.js instead of index.js when asked).
+npm install # => then you have to install dependencies.
+node app.js
+npm install express --save
+npm install body-parser --save # => will allow you to parse with express etc.
+npm install -g nodemon # => so you don't need to restart your nodejs
+npm install ejs --save # => html templating.
+```
+
+
 **Remote debug nodejs app / use chrome developers to detect memory leaks**
 
 **Step 1 enable remote debug on a running nodejs process**
