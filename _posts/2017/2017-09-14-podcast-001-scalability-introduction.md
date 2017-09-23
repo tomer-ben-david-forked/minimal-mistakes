@@ -25,6 +25,16 @@ At your high-tech business you can view the scale issues as reflection of real p
 
 It's a real life situation and a problem which you solve in surprisingly similar ways in both low-tech and high-tech industries.  So when you have an organization you have people.  These people some of them the architects at least or the senior developers, or, if you are a small company then all developers are the one creating the high level architecture of your solution.  
 
+**Your Money or Horizontal Scaling!**
+shows the different in cost for vertical scalability vs horizontal one.
+
+![Web Scalability For Startup Engineers](https://cdn-images-1.medium.com/max/1600/1*Q04Whj8FX5qNt7rjAHy95w.png)
+
+**[From: Web Scalability For Startup Engineers — 
+Book Review Here](https://techblog.planetizer.com/book-review-web-scalability-for-startup-engineers)**
+
+The author shows that scaling horizontally for example with CDN is not only cost effective, but often pretty much transparent! “The more traffic you generate, the more you are charged by the provider, but the cost per capacity unit remains constant”. [Web Scalability For Startup Engineers Book](https://techblog.planetizer.com/book-review-web-scalability-for-startup-engineers)
+
 **Humans Create Architecture**
 
 The first thing to notice that we are talking about people who are creating technology so if you choose a right organizational structure such as what should be the team size? Then you will be able to create better a architecture.  Now when you choose your way organization structure you need to take into account a few considerations and some of them is how much communication do you need between with people you want the least amount of communication which will allow people to do a great job.
