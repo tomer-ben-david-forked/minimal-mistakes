@@ -37,4 +37,4 @@ I think this book is more tailored at software developers but not only, it reall
 
 **Conclusion**
 
-**[Web Scalability For Startup Engineers](http://amzn.to/2xp7yml)**. is my favorite book to learn scalability these days ;)
+**[Web Scalability For Startup Engineers](http://amzn.to/2xp7yml)**. Is a great resource to take you up the road into being a professional software developer, having an overall knowledge of system design and how to build systems.
