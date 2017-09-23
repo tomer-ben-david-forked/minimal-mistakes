@@ -1,5 +1,6 @@
 ---
 title: Book Review: Web Scalability For Startup Engineers
+permalink: book-review-web-scalability-for-startup-engineers
 ---
 **Introduction**
 
