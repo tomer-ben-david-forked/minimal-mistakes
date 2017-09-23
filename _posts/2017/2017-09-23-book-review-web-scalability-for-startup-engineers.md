@@ -1,5 +1,5 @@
 ---
-title: Book Review Learn You A Haskell For A Great Good
+title: Book Review: Web Scalability For Startup Engineers
 ---
 **Introduction**
 
