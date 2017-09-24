@@ -1,7 +1,7 @@
 ---
-title: The Leave at 5pm efficient programmer - introduction
+title: Remove the middleman, finding cheap flights yourself is so easy!
 permalink: /tips-for-you-to-find-cheap-flights/
-published: true
+published: false
 ---
 
 **This is how you find damn cheap flights!**
