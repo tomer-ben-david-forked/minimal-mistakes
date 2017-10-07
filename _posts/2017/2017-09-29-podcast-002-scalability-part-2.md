@@ -1,5 +1,5 @@
 ---
-title: 002 Scalability And Startups
+title: Scalability And Startsups (Podcast)
 permalink: podcast-002-scalability-part-2
 category: podcast
 date: 2017-09-29 12:00:00
