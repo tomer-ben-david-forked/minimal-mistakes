@@ -1,7 +1,7 @@
 ---
 title: Scalability Definition and Analogies (Podcast)
 permalink: podcast-scalability-definition-and-analogies
-category: podcast,dev
+category: podcast
 date: 2017-10-08 12:00:00
 number: 4
 duration: 11:28
