@@ -1,5 +1,5 @@
 ---
-layout: post
+
 title:  "Best performance tuning resources - tutorials, videos, books"
 date:   2016-02-29 22:18:00
 categories: performance,tuning

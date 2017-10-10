@@ -1,5 +1,5 @@
 ---
-layout: post
+
 title:  "Squash multiple push in git"
 date:   2015-11-15 22:18:00
 categories: devops,git

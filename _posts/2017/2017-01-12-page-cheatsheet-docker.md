@@ -1,5 +1,5 @@
 ---
-layout: post
+
 title:  "Docker cheasheet"
 date:   2017-01-12 22:18:00
 categories: cheatsheet,containers,devops

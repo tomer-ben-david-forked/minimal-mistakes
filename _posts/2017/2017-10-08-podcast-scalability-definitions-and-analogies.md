@@ -1,18 +1,18 @@
 ---
-title: Technologies VS Architectures Episode (Podcast)
-permalink: podcast-technologies-vs-architecture
+title: Scalability Definition and Analogies (Podcast)
+permalink: podcast-scalability-definition-and-analogies
 category: podcast,dev
-date: 2017-10-07 12:00:00
-number: 3
-duration: 11:43
-length: 11149312
-mp3: https://archive.org/download/tomerbd1_gmail_003/003.mp3
+date: 2017-10-08 12:00:00
+number: 4
+duration: 11:28
+length: 10730496
+mp3: https://archive.org/download/004ScalabilityDefinitionAndAnalogies/004-scalability-definition-and-analogies.mp3
 ---
 
-**Technologies VS Architectures**
+**Scalability - Definition and Analogies (Podcast)**
 
-<iframe src="https://archive.org/download/tomerbd1_gmail_003/003.mp3" width="300" height="70" frameborder="0" webkitallowfullscreen="true" mozallowfullscreen="true" allowfullscreen></iframe>
+<iframe src="https://archive.org/download/004ScalabilityDefinitionAndAnalogies/004-scalability-definition-and-analogies.mp3" width="300" height="60" frameborder="0" webkitallowfullscreen="true" mozallowfullscreen="true" allowfullscreen></iframe>
 
-Too many times people are mistakenly replacing architectures with technologies.  Today's hyped technology becomes an "architecture".  How should we differentiate between technologies and architectures? can we do that at all? what are the similarities and differences?
+Is it possible to define scalability? if so what is it's proper definition.  Can we devise proper analogies to software development scalability and real world old fashion scalability? In this episode we are going to touch upon these two topics.  I hope you enjoy the show!
  
  

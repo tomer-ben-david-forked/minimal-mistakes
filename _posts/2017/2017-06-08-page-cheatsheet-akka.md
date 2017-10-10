@@ -1,5 +1,5 @@
 ---
-layout: post
+
 title:  "Akka CheatSheet"
 date:   2017-06-08 22:18:00
 categories: scalability

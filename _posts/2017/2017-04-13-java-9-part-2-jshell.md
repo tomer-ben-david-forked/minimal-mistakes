@@ -1,5 +1,5 @@
 ---
-layout: post
+
 title:  "Java 9 Part 2 - JShell"
 date:   2017-04-13 22:18:00
 categories: dev,java,functional-programming

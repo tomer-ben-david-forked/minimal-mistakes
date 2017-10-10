@@ -1,5 +1,5 @@
 ---
-layout: post
+
 title:  "Java cheasheet"
 date:   2016-12-28 22:18:00
 categories: cheatsheet,java

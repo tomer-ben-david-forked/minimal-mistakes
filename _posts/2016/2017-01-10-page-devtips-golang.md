@@ -1,5 +1,5 @@
 ---
-layout: post
+
 title:  "Go cheasheet"
 date:   2017-01-10 22:18:00
 categories: cheatsheet,go,golang

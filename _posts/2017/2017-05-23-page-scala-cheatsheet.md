@@ -1,5 +1,5 @@
 ---
-layout: post
+
 title:  "Scala CheatSheet"
 date:   2015-05-22 22:18:00
 categories: scala

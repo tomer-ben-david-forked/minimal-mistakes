@@ -1,5 +1,5 @@
 ---
-layout: post
+
 title:  "Best ubuntu resources - tutorials, videos, books"
 date:   2015-05-22 22:18:00
 categories: scala,functional-programming,scalding

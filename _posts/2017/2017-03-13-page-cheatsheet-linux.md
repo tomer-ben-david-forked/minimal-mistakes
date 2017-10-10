@@ -1,5 +1,5 @@
 ---
-layout: post
+
 title:  "Linux cheasheet"
 date:   2017-03-13 22:18:00
 categories: cheatsheet,linux,bash,centos

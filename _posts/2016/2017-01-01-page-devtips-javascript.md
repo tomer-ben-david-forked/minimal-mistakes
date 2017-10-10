@@ -1,5 +1,5 @@
 ---
-layout: post
+
 title:  "JavaScript cheasheet"
 date:   2017-01-01 22:18:00
 categories: cheatsheet,javascript

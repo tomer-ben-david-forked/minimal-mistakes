@@ -1,5 +1,5 @@
 ---
-layout: post
+
 title:  "Scala map and flatMap the missing explanation"
 date:   2015-12-09 22:18:00
 categories: scala, functional-programming

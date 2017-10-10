@@ -1,5 +1,5 @@
 ---
-layout: post
+
 title:  "Hadoop job with scalding on docker"
 date:   2015-01-08 22:18:00
 comments: true

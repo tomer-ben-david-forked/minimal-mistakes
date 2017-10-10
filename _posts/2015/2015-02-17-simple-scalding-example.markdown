@@ -1,5 +1,5 @@
 ---
-layout: post
+
 title:  "Simple scalding example"
 date:   2015-02-17 22:18:00
 categories: scala,functional-programming,scalding,hadoop

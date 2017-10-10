@@ -1,5 +1,5 @@
 ---
-layout: post
+
 title:  "Python cheasheet"
 date:   2016-12-27 22:18:00
 categories: cheatsheet,python

@@ -1,5 +1,5 @@
 ---
-layout: post
+
 title:  "Docker up and running book review"
 date:   2015-09-15 22:18:00
 categories: devops

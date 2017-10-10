@@ -1,5 +1,5 @@
 ---
-layout: post
+
 title:  "Best leisure time - tutorials, videos, books"
 date:   2015-05-22 22:18:00
 categories: leisure,popular-science

@@ -1,5 +1,5 @@
 ---
-layout: post
+
 title:  "Best philosophy resources - tutorials, videos, books"
 date:   2015-04-09 22:18:00
 categories: philosophy

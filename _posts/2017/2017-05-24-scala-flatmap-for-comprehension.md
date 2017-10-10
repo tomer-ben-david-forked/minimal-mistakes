@@ -1,5 +1,5 @@
 ---
-layout: post
+
 title:  "Scala flatMap and for comprehension"
 date:   2017-05-24 22:18:00
 categories: scala

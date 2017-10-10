@@ -1,5 +1,5 @@
 ---
-layout: post
+
 title:  "SBT for dummies"
 date:   2015-12-18 22:18:00
 categories: scala, devops

@@ -1,5 +1,5 @@
 ---
-layout: post
+
 title:  "Java 9 Part 5 - Flow the new Reactive Streams"
 date:   2017-04-13 22:18:00
 categories: java,java9,java 9,resources, tutorials, try with resources, design patters, software design

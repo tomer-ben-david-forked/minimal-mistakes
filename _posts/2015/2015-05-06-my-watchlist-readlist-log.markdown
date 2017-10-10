@@ -1,5 +1,5 @@
 ---
-layout: post
+
 title:  "My watchlist readlist log"
 date:   2015-05-06 22:18:00
 categories: programming, web, UI, philosophy, mobile
@@ -18,7 +18,7 @@ Here I will describe all that I watch, read which is **well worth reading/watchi
 * [Jamey allen on what you need to know about lambda](http://www.slideshare.net/jaxLondonConference/what-you-need-to-know-about-lambdas-jamie-allen-typesafe)
 lambda are mostly ugly! Heave for clean code freaks!
 * [Databricks scala style guide](https://github.com/databricks/scala-style-guide)
-The style guide for clean code freaks! (count me in!) 
+The style guide for clean code freaks! (count me in!)
 * [Spark developer on scala](https://www.parleys.com/tutorial/apache-spark-large-community-project-scala)
 This guy is sane, he is one the main spark developers, (paused his PhD due to spark development) and he is sane! Meaning he says do not overuse scala features, keep your code clean to readers, do not overuse `DSL`, do not overuse `monadic`, sometimes imperative is cleaner for readers! I like that as i'm a clean code freak!
 * [Effective Actors By JAmie Allen](https://vimeo.com/65556264)

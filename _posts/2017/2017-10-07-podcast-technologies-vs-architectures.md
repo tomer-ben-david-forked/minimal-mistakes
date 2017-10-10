@@ -1,5 +1,5 @@
 ---
-title: Technologies VS Architectures Episode (Podcast)
+title: Technologies VS Architectures Episode (Podcast) 1
 permalink: podcast-technologies-vs-architecture
 category: podcast,dev
 date: 2017-10-07 12:00:00

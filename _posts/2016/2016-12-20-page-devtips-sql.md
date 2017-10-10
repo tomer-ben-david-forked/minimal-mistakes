@@ -1,5 +1,5 @@
 ---
-layout: post
+
 title:  "SQL cheasheet"
 date:   2016-12-20 22:18:00
 categories: cheatsheet,sql

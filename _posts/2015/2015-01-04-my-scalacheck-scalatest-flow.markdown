@@ -1,5 +1,5 @@
 ---
-layout: post
+
 title:  "My scalatest scalacheck flow"
 date:   2015-01-04 22:18:00
 categories: scala,functional-programming

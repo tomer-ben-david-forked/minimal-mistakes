@@ -1,5 +1,5 @@
 ---
-layout: post
+
 title:  "Best WEBUI resources - tutorials, videos, books"
 date:   2015-05-06 22:18:00
 categories: programming, web, UI

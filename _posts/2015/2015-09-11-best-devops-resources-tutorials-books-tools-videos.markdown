@@ -1,5 +1,5 @@
 ---
-layout: post
+
 title:  "Best devops resources - tutorials, videos, books"
 date:   2015-09-11 22:18:00
 categories: scala,functional-programming,scalding,hadoop

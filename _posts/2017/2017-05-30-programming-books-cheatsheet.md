@@ -1,5 +1,5 @@
 ---
-layout: post
+
 title:  "Programming books cheatsheet - the best"
 date:   2017-05-30 22:18:00
 comments: true

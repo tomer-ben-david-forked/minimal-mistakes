@@ -1,5 +1,5 @@
 ---
-layout: post
+
 title:  "Coding with sanity in mind"
 date:   2015-12-18 22:18:00
 categories: software-development,architecture,design

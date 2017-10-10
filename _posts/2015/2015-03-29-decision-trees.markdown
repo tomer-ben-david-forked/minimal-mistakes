@@ -1,5 +1,5 @@
 ---
-layout: post
+
 title:  "Decision Trees, entropy and information gain"
 date:   2015-03-29 22:18:00
 categories: machine-learning,algorithms
@@ -7,7 +7,7 @@ comments: true
 ---
 #### Introduction
 So you need to decide on something and wish to perform it the `machine-learning` way? you have come to the right `www` page.  `decision trees` are basically a bunch of questions you ask yourself (or the machine if you are a software developer) until you get to an prediction of what the answer is most likely to be according to the `decision tree` you or your machine have built.  Examples:
-  
+
 * Should we hire that candidate?
 * Should I trust this Guy?
 * Is the world coming to an end?

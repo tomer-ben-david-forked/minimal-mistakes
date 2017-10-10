@@ -1,5 +1,5 @@
 ---
-layout: post
+
 title:  "Ruby cheasheet"
 date:   2017-01-15 22:18:00
 categories: cheatsheet,ruby
