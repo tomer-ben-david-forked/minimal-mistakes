@@ -4,7 +4,7 @@ permalink: book-review-web-scalability-for-startup-engineers
 ---
 **Introduction**
 
-You need to scala your systems, how about talking directly to someone who has done that, from zero to scaling, and he would give you all the advices, and technical advices you need? This is what this book is all about!
+You need to scale your systems, how about talking directly to someone who has done that, from zero to scaling, and he would give you all the advices, and technical advices you need? This is what this book is all about!
 
 Scalability is not only an interesting topic.  One of the most common reasons to learn scalability is because it encompasses almost all aspects of software development, that is, programming, web, architecture, system architecture, design, protocols, and people - organizations.
 
