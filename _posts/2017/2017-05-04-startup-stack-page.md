@@ -10,6 +10,7 @@ permalink: startup-stack-resources
 
 1. [awesome jekyll themes](https://github.com/planetjekyll/awesome-jekyll-themes)
 1. [static sites dynamic](http://staticman.net)
+1. [youmightnotneedjquery.com](http://youmightnotneedjquery.com/)
 
 ### Static websites
 
