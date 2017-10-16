@@ -263,7 +263,7 @@ podcast:
   title: For Software Engineers, Engineering, Programming
   art: https://upload.wikimedia.org/wikipedia/commons/e/e9/Serial_Podcast.jpg
   category: Education
-  subcategories:
-  - Training
+  subcategories: Training
   subtitle: For Software Engineers, For Software Development, Programming
   summary: This is software engineering podcast where we discuss scalability, engineering, functional programming, api design, UI, machine learning.
+  link: https://techblog.planetizer.com
