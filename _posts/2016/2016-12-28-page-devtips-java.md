@@ -5,6 +5,23 @@ date:   2016-12-28 22:18:00
 categories: cheatsheet,java
 comments: true
 ---
+
+**Simple pom.xml**
+```xml
+<project>
+  <modelVersion>4.0.0</modelVersion>
+ 
+  <groupId>com.mycompany.app</groupId>
+  <artifactId>my-app</artifactId>
+  <version>1.0-SNAPSHOT</version>
+</project>
+```
+
+**Maven**
+```bash
+mvn exec:java -Dexec.mainClass="Main" # => Run java Main.java from maven.
+```
+
 ```java
 System.out.printf("%3d    ", n); // print number with spaces.
 ```
