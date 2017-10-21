@@ -24,6 +24,7 @@ mvn exec:java -Dexec.mainClass="Main" # => Run java Main.java from maven.
 
 ```java
 System.out.printf("%3d    ", n); // print number with spaces.
+System.out.println(Files.readAllLines(Paths.get("file.txt"))); // Read file with java.
 ```
 
 
@@ -74,6 +75,23 @@ Arrays.stream(sc.nextLine().split(" ")).forEach(item -> {});
 int totalSum = Arrays.stream(lineAsStr.split(" "))
             .map(numAsStr -> Integer.valueOf(numAsStr))
             .reduce(0, (sum, n) -> sum += n);
+```
+
+**Ordered Tree Map**
+
+As it sounds it's a map so you put things but you can traverse keys in ordered way.
+```java
+		TreeMap treeMap = new TreeMap();
+
+		treeMap.put("a", "b");
+		treeMap.put("d", "d");
+		treeMap.put("c", "c");
+
+		Iterator it = treeMap.entrySet().iterator();
+		while (it.hasNext()) {
+			System.out.println(it.next()); // Printed by key order.
+		}
+
 ```
 
 ## Resources
