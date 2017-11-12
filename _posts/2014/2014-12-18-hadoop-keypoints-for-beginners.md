@@ -10,7 +10,7 @@ published: false
 #### Key Concepts
 
 * Every mapper communicates with all reducers (potentially sending data to all of them).
-* `Shuffle` - communication from mappers to reducers.
+* `Shuffle` - communication from mappers to reducers mappers are like shuffeling cards to the reducers its more like sticky shuffles.
 * `Block Size` - Files are split to blocks you can any file size it would just get split into blocks (64MB / 128MB ...)
 * `Partitioner` - Splits map result to reducer the by `hash` so same keys always reach same reducers.  **same key will always reach same reducer**.
 * If you want your result reside in single file (cant be multiple blocks) you need a **single reducer**.
