@@ -1,7 +1,8 @@
 ---
-title: Byzantine Fault Tolerance in Bitcoin
-permalink: byzantine-fault-tolerance-in-bitcoin
+title: Byzantine Fault Tolerance in Bitcoin Pitchme
+permalink: byzantine-fault-tolerance-in-bitcoin-pitchme
 date: 2017-12-04 12:00:00
+published: false
 ---
 @title[Introduction]
 ## Byzantine fault tolerance and Bitcoin
