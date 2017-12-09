@@ -33,7 +33,7 @@ published: false
 ---
 ## Tabular data form
 
-<img src="https://tinyurl.com/ya92ygyw" height=400/>
+<img src="https://tinyurl.com/ya92ygyw" height=200/>
 
 - Columns are variables aka attributes aka features
 - Rows are data points
@@ -56,7 +56,7 @@ published: false
 ---
 ## Feature engineering
 
-<img src="https://tinyurl.com/ycw3mgtl" height=400/>
+<img src="https://tinyurl.com/ycw3mgtl" height=200/>
 
 - Group based on Species
 
