@@ -9,7 +9,7 @@ published: false
 # Data Science - Algorithm Selection
 
 ---
-### Algorithm Selection
+### Algorithms, Parameters, Validation
 <img src="https://tinyurl.com/ycqpyykz" height=500/>
 
 Note:
