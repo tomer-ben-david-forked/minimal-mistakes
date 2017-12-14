@@ -6,10 +6,10 @@ published: false
 ---
 
 @title[Introduction]
-# Data Science - Algorithm Selection
+# Data Science - Algorithms, Parameters, Validation
 
 ---
-### Algorithms, Parameters, Validation
+### Algorithm Selection
 <img src="https://tinyurl.com/ycqpyykz" height=500/>
 
 Note:
