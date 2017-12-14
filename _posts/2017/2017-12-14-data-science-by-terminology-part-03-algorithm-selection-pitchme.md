@@ -30,6 +30,9 @@ Patterns --> Predictions --> Improve predictions with results
 Note:
 
 ---
+# Thanks for watching, See you next time
+
+---
 ### Confusion Matrix
 <img src="https://tinyurl.com/yaejedlc" height=500/>
 
