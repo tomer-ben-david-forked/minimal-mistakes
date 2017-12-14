@@ -24,13 +24,13 @@ Patterns --> Predictions --> Improve predictions with results
 <img src="https://tinyurl.com/ya2wzj5h" height=500/>
 
 ---
+# Thanks for watching, See you next time
+
+---
 ### Fitting
 <img src="https://tinyurl.com/y7ks8owg" height=500/>
 
 Note:
-
----
-# Thanks for watching, See you next time
 
 ---
 ### Confusion Matrix
