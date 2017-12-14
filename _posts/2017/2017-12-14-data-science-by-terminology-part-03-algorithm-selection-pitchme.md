@@ -1,15 +1,15 @@
 ---
-title: Data Science By Terminology Part 02 Harari End of Humanism Pitchme
-permalink: data-science-by-terminology-part-02-harari-pitch
-date: 2017-12-08 12:00:00
+title: Data Science By Terminology Part 03 Algorithm Selection Pitchme
+permalink: data-science-by-terminology-part-03-algorithm-selection
+date: 2017-12-04 12:00:00
 published: false
 ---
 
 @title[Introduction]
-# Data Science and Homo Sapiens
+# Data Science - Algorithm Selection
 
 ---
-<img src="https://static.pexels.com/photos/103123/pexels-photo-103123.jpeg" height=400/>
+<img src="https://tinyurl.com/ycqpyykz" height=600/>
 
 ---
 # Humans control
