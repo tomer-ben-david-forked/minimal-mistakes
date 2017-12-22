@@ -6,6 +6,6 @@ comments: true
 permalink: bugs-cheatsheet
 ---
 
-| Term               | Meaning                                  |
+| Do                 | Do that because                          |
 | ------------------ | ---------------------------------------- |
 | Don't ignore facts | Saw some big object in logs? don't ignore this<br />As trivial as this may sound, everything we ignore while troubleshooting<br />May be the root cause, don't let anything be neglected as this does not matter. |
