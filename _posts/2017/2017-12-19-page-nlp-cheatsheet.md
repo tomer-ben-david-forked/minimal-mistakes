@@ -27,4 +27,9 @@ permalink: nlp-cheatsheet
 | Dev(=Validation) Set    | Tuning Parameters (and also to prevent overfitting), tune model |
 | Test Set                | Check your model                         |
 | Text Features           | Convert documents to be classified into features, <br />bags of words word vectors, can use TF-IDF |
-| LDA                     | Latent Dirichlecht Allocation: LDA(Documents) => Topics<br />Topic == Set(Representative Terms) ~ like hashtags<br />Technology Topic: Scala, Programming, Machine Learning  <br />Sport Topic: Football, Basketball, Skateboards (3 most important words)<br />Pick number # of topics ahead of time like 5 topics<br />Doc = Distribution(topics) probability for each topic<br />Topic = Distribution(words) technology topic higher probably over cpu word<br />Unsupervised, what topics patterns are there. |
+| LDA                     | Latent Dirichlecht Allocation: LDA(Documents) => Topics<br />Technology Topic: Scala, Programming, Machine Learning  <br />Sport Topic: Football, Basketball, Skateboards (3 most important words)<br />Pick number # of topics ahead of time like 5 topics<br />Doc = Distribution(topics) probability for each topic<br />Topic = Distribution(words) technology topic higher probably over cpu word<br />Unsupervised, what topics patterns are there.  Good for getting the sense what the doc is about. |
+| **Machine Reading**     |                                          |
+| Entity Extraction       | EntityRecognition(text) => (EntityName -> EntityType)<br />("paul newman is a great actor") => [(PaulNewman -> Person)] |
+| Entity Linking          | EntityLinking(Entity) => FixedMeaning<br />EntityLinking("PaulNewman") => "http://wikipedia../paul_newman_the_actor"<br />(and not the other paul newman based on text) |
+| dbpedia                 | DB for wikipedia, machines can read it its a db.  Query DBPedia with SparQL |
+| FRED (lib) / Pikes      | FRED(natural-language) => formal-structure |
