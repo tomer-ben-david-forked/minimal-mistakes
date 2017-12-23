@@ -1,6 +1,6 @@
 ---
 title:  "Python cheasheet"
-date:   2017-22-27 22:18:00
+date:   2017-12-27 22:18:00
 categories: cheatsheet,python
 comments: true
 permalink: python-cheatsheet
