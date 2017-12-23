@@ -5,6 +5,7 @@ categories: cheatsheet,python
 comments: true
 permalink: python-cheatsheet
 ---
+
 | Item                            | Description                              |
 | ------------------------------- | ---------------------------------------- |
 | Type Annotations                | https://docs.python.org/3/library/typing.html |
