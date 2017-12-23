@@ -10,7 +10,7 @@ permalink: python-cheatsheet
 | ------------------------------- | ---------------------------------------- |
 | Type Annotations                | https://docs.python.org/3/library/typing.html |
 | Retroactifve Type annotations   | https://github.com/Instagram/MonkeyType  |
-| Get URL Content                 | ` print urllib2.urlopen('http://google.com').read()` |
-| Remove chars and split, to list | `'jshfjshfjsh[]'.translate(None, '[] "\n').split(',')` |
-| Diff arrays                     | ` set(['first', 'second', 'third']) - set(['first', 'second'])` |
+| Get URL Content                 | print urllib2.urlopen('http://google.com').read() |
+| Remove chars and split, to list | 'jshfjshfjsh[]'.translate(None, '[] "\n').split(',') |
+| Diff arrays                     | set(['first', 'second', 'third']) - set(['first', 'second']) |
 |                                 |                                          |
