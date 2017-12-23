@@ -9,7 +9,7 @@ permalink: nlp-cheatsheet
 | Term                    | Meaning                                  |
 | ----------------------- | ---------------------------------------- |
 | **Weights and Vectors** |                                          |
-| TF-IDF                  | Weight higher the more a word appears in doc and not in corpus |
+| TF-IDF                  | Weight higher the more a word appears in doc and not in corpus<br />Term Frequency Inverse Document Frequency |
 | length(TF-IDF, doc)     | num of distinct words in doc, for each word number in vector. |
 | Word Vectors            | Calculate word vector:<br/>for each word w1 => for each 5 window words, make vectors increasingly<br />closer, v[w1] closer v[w2]<br />king - queen ~ man - woman // wow it will find that for you!<br />You can even download ready made word vectors<br />https://tinyurl.com/word-vectors |
 | Google Word Vectors     | You can download ready made google trained vector words |
@@ -33,3 +33,4 @@ permalink: nlp-cheatsheet
 | Entity Linking          | EntityLinking(Entity) => FixedMeaning<br />EntityLinking("PaulNewman") => "http://wikipedia../paul_newman_the_actor"<br />(and not the other paul newman based on text) |
 | dbpedia                 | DB for wikipedia, machines can read it its a db.  Query DBPedia with SparQL |
 | FRED (lib) / Pikes      | FRED(natural-language) => formal-structure |
+| Resources               | <a target="_blank"  href="https://www.amazon.com/gp/product/193398838X/ref=as_li_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=193398838X&linkCode=as2&tag=planetizer0c-20&linkId=a3e1a501f6af2cf639f001db0a50f67d"><img border="0" src="//ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&MarketPlace=US&ASIN=193398838X&ServiceVersion=20070822&ID=AsinImage&WS=1&Format=_SL250_&tag=planetizer0c-20" ></a><img src="//ir-na.amazon-adsystem.com/e/ir?t=planetizer0c-20&l=am2&o=1&a=193398838X" width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;" /> |
