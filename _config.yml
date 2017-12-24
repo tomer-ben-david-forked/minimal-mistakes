@@ -13,7 +13,7 @@ title                    : "Tomer Ben David on Programming"
 title_separator          : "-"
 name                     : "Tomer Ben David"
 description              : "On Software Development, Self Development, Life, Death and Philosophy."
-url                      : "https://techblog.planetizer.com" # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
+url                      : "https://tomer-ben-david.github.io" # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : # the subpath of your site, e.g. "/blog"
 repository               : # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
 teaser                   : # path of fallback teaser image, e.g. "/assets/images/500x300.png"
@@ -266,4 +266,4 @@ podcast:
   subcategories: Training
   subtitle: For Software Engineers, For Software Development, Programming
   summary: This is software engineering podcast where we discuss scalability, engineering, functional programming, api design, UI, machine learning.
-  link: https://techblog.planetizer.com
+  link: https://tomer-ben-david.github.io
