@@ -40,11 +40,11 @@ permalink: datascience-cheatsheet
 | `myRdd.collect()`          | `Array(2,4)`                             |
 | `rdd.cache()`              | So that if you have multiple `.action()` like `.collect()` data won't be referched for the transformations rdd again. |
 | **Local dev**              |                                          |
-| Spark Dependency           | `libraryDependencies += "org.apache.spark" %% "spark-core" % "2.2.0"` |
+| Spark Dependency           | <script src="https://gist.github.com/tomer-ben-david/9068a65e798e226a979765c359ae8b31.js"></script> |
 | Main                       | `object SparkExample extends App<br />override def main(args: Array[String]): Unit = {` |
 | Spark conf and context     | `val conf = new SparkConf().setAppName("parse my book").setMaster("local[*]")<br />val sc = new SparkContext(conf)` |
-| Load text from http        | `val mobyDickText = scala.io.Source.fromURL("http://www.gutenberg.org/files/2701/2701-0.txt").mkString <br />val mobyDickLines = mobyDickText.split("\n") <br />val mobyDickRDD = sc.parallelize(mobyDickLines) <br />val cleanedMobyDick = mobyDickRDD.flatMap(_.split("[^0-9a-zA-Z]")) // split by non alphanumeric chars` |
-| Reduce by top words        | `cleanedMobyDick.filter(!_.isEmpty)   <br />.map(_.toLowerCase())   <br />.map((_, 1))   <br />.reduceByKey(_ + _)   <br />.takeOrdered(10)(Ordering[Int].reverse.on(_._2))   .foreach(println) ` |
+| Load text from http        | <script src="https://gist.github.com/tomer-ben-david/d94bcd0060b8a9acb04857903d71cd81.js"></script> |
+| Reduce by top words        | <script src="https://gist.github.com/tomer-ben-david/5662e1e709a74e7a69cb7d942c822fbc.js"></script> |
 | **Performance**            |                                          |
 | *ByKey                     | reduceByKey much more efficient than reduce, no shuffle. *byKey. |
 | Driver Node RAM            | Result < RAM on driver machine, result returned through driver Otherwise out of memory. |
