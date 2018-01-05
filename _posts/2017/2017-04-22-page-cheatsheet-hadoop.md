@@ -13,6 +13,14 @@ We have decided to aggregate in a single post the most important things to know 
 
 ## Hadoop
 
+|               |                                          |
+| ------------- | ---------------------------------------- |
+| Sequence File | Java writable binary format not language independant |
+| Avro          | Language independent                     |
+|               |                                          |
+
+
+
 ```bash
 ##########
 ## HDFS ##
@@ -91,7 +99,7 @@ Start zeppelin, from zepplin home, you can view the hdfs in zeppelin with:
 %file
 
 ls /
-``` 
+```
 
 zeppelin collides with spark master on port 8080 we change it to 8180
 
