@@ -63,6 +63,6 @@ permalink: datascience-cheatsheet
 | Take top 10                | `.takeOrdered(10)(Ordering[Int].reverse.on(_._2))` |
 | Print                      | `.foreach(println)`                      |
 | **Test Spark**             |                                          |
-| SparkSuite                 | ```class SparkTestExample extends Specification {   <br />def sc = SparkContext.getOrCreate(new SparkConf().setAppName("parse my book").setMaster("local[*]"))    "this is my specification" should {     "have one example" in {       val rdd = sc.makeRDD(List(1,2))       val filteredRDD = rdd.filter(_ != 1)       filteredRDD.collect().length must_== 1     }   }    def buildTestSparkConf(): SparkConf = {     new SparkConf().setAppName("test-app")         .setMaster("local[*]")       .set("spark.driver.allowMultipleContexts", "true")       .set("spark.app.id", s"${System.currentTimeMillis()}-${Random.nextInt(100)}")   } }``` |
+| SparkSuite                 | <script src="https://gist.github.com/tomer-ben-david/7531e451c62f10addb3c997f5b2d125e.js"></script> |
 |                            |                                          |
 
