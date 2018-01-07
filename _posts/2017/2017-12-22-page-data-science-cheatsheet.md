@@ -48,6 +48,7 @@ permalink: datascience-cheatsheet
 | **Performance**            |                                          |
 | *ByKey                     | reduceByKey much more efficient than reduce, no shuffle. *byKey. |
 | Driver Node RAM            | Result < RAM on driver machine, result returned through driver Otherwise out of memory. |
+| minimize shuffles          | The less you have the better spark will utilize data locallity and memory |
 | **Beginning NLP**          |                                          |
 | Cleanup                    | Remove whitespaces, split by new lines, ... |
 | Clean Text                 | tokenize, remove whitespaces, filter empty strings, wors to lower case |
@@ -64,5 +65,6 @@ permalink: datascience-cheatsheet
 | Print                      | `.foreach(println)`                      |
 | **Test Spark**             |                                          |
 | SparkSuite                 | <script src="https://gist.github.com/tomer-ben-david/7531e451c62f10addb3c997f5b2d125e.js"></script> |
-|                            |                                          |
+| **Data Science Terms**     |                                          |
+| HyperLogLog                | on machine 1 for each user => hll1.add(user), on machine 2: for each user hll2.add(user);  hll1.unify(hll2) .  hll.size() will return how many users estimation with low memory. |
 
