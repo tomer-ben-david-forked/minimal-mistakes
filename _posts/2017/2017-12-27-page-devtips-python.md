@@ -14,3 +14,6 @@ permalink: python-cheatsheet
 | Remove chars and split, to list | 'jshfjshfjsh[]'.translate(None, '[] "\n').split(',') |
 | Diff arrays                     | set(['first', 'second', 'third']) - set(['first', 'second']) |
 |                                 |                                          |
+
+1. ​
+

@@ -10,7 +10,13 @@ permalink: r-cheatsheet
 
 | Item                         | HOWTO                                    |
 | ---------------------------- | ---------------------------------------- |
+| CheatSheet                   | https://www.rstudio.com/wp-content/uploads/2016/10/r-cheat-sheet-3.pdf |
+| function                     | `term.frequency <- function(row) { row / sum(row) }` <br />`apply(someMatrix, 1, term.frequency)` # 1: rows, 2: cols |
+| **Inmem Data**               |                                          |
+| Create matrix dataframe      | <script src="https://gist.github.com/tomer-ben-david/bd9b1433a79072d2c04e1dae4d1d6b2d.js"></script> |
 | **Parsing Text**             |                                          |
+| Read csv from url            | <script src="https://gist.github.com/tomer-ben-david/97e76f4563da8db978f5594d48bd61ad.js"></script> |
+|                              |                                          |
 | Read text file               | `mylog <- readLines("~./someserver.log")` |
 | Remove two first lines       | `mylog <- mylog[3:length(mylog)]` // keep from line 3 to length |
 | number of rows               | `nrow(mylog)`                            |
@@ -27,7 +33,12 @@ permalink: r-cheatsheet
 | Filter vector                | `actionsPerDay[actionsPerDay >= 0]` // only values larger than zero. |
 | Add date to dateless lines   | * `dat$rep_date = rep(all_data[rep_date_entries], times = actions_per_day)`<br />* we know for each date how many times to repeat -> actions_per_day<br />rep means repeat, so repeat for dateless lines dat$rep_date<br />* new column added take the lines from all_data[rep_date_entries and for each such add] |
 | string to date               | dat$rep_date = strptime(dat$rep_date, "%Y-%m-%d") |
-|                              |                                          |
+| loop - apply                 | apply function over rows or cols of matrix `apply(mymatrix, 1, myfunc) # 1: do it on th erows of the my matrix |
+| **Plot**                     |                                          |
+|                              | <script src="https://gist.github.com/tomer-ben-david/bd9b1433a79072d2c04e1dae4d1d6b2d.js"></script> |
+| Resoures                     |                                          |
+| **NLP with R**               | https://www.youtube.com/watch?v=4vuw0AsHeGw |
+| nlp package                  | Quanteda (tokenization, filtering, ..)   |
 
 **Read log file and print line chart**
 
