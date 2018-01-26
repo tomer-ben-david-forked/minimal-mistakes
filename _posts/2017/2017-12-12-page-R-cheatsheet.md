@@ -11,7 +11,11 @@ permalink: r-cheatsheet
 | Item                         | HOWTO                                    |
 | ---------------------------- | ---------------------------------------- |
 | CheatSheet                   | https://www.rstudio.com/wp-content/uploads/2016/10/r-cheat-sheet-3.pdf |
+| Vector                       | create manually c(1,2,3) # => c is combine |
 | function                     | `term.frequency <- function(row) { row / sum(row) }` <br />`apply(someMatrix, 1, term.frequency)` # 1: rows, 2: cols |
+| **Matrix**                   |                                          |
+| Remove column                | `matrix[, -c[2,4]` # => remove columns 2,4 |
+| Filter get indexes           | `indexes <- matrix(somedata$Label == `spam`) # => all indexes of spam. |
 | **Inmem Data**               |                                          |
 | Create matrix dataframe      | <script src="https://gist.github.com/tomer-ben-david/bd9b1433a79072d2c04e1dae4d1d6b2d.js"></script> |
 | **Parsing Text**             |                                          |

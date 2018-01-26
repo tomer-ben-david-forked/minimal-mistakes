@@ -43,6 +43,7 @@ permalink: datascience-cheatsheet
 | Driver Node RAM                          | Result < RAM on driver machine, result returned through driver Otherwise out of memory. |
 | minimize shuffles                        | The less you have the better spark will utilize data locallity and memory |
 | **Beginning NLP**                        |                                          |
+| High dimentionality                      | text analytics is a high dimentionality problem, it's not infrequent to have 100K features. |
 |                                          | Watch this great series here: https://www.youtube.com/playlist?list=PL8eNk_zTBST8olxIRFoo0YeXxEOkYdoxi |
 | Preprocessing                            |                                          |
 | Step 1: Observe                          | Observe the data, see what it is do some plotting |
@@ -56,6 +57,20 @@ permalink: datascience-cheatsheet
 | Step 6: ngram                            | We counted for single words 1-gram but can we count cobination of words? ngram is not combination of words it's just consequetive words 2gram each 2 consequetive words.  bigram more than 2X matrix size.  The curse of dimentionality problem.  This creates a very sparse matrix. |
 | Step 7: Random Forest                    | Bigram can reduce the accuracy! so we would need to combine them with Random Forests. |
 | Step 7.1: LSA - Latent Semantic Analysis | Money, Loan, … => collapse to => Depth! Matrix Factoriation : Feature reduction, based on dot product of similar docs, reduce them, based on SVD - singular value decomposition - decompose a matrix - break it down into smaller chunks, reduce the huge size of our ngram sparse matrix.  Which will allow us to use Step 7 random forsest otherwise would take too much time.  Geometrically how close are two vectors (two rows each row is a vector), dot product gives an estimation of how close two vectors are, it's less precise than cosine correlation but it's part of it.<br />LSA - collapses together the term-document and document-term (rows and columsn) and treats them together collapse both to higher order construct. |
+| Step 8: Random Forest                    | Now that we collapsed the matrix we run a much better algorithm random forest and improe results by 2% . |
+| Step 9: Specifity/Sensitivity            | Decide if you prefer sensitivity or specifity and do feature engineering to prefer accuracy in one of them.  Example add feature $textLength we saw from visual plot that long emais are spam.  Repeat the model creation.  Feel free to also look if your accuracy and specifity and sensitivity are all gong up. |
+| Step 10: Feature engineering VarImpPlot  | check which features are important.  In many cases the feature you engineer as a human like the textLength are far far more important and predict much much well than the discovered features, this is where you as a data scientist add value - feature engineering.<br />Among the engineered features: #1 spam similarity.  #2 Text langth  howeverif some feature is like too much good i predicting it can be an indicatin of overfitting. |
+| Step 10.1: Adding cosine similarity engineered feature |                                          |
+| Step 11: Test - Test Data                | You need to make sure your columns in test data are same in size and meaning as in train data.  R "dfm_select" does exactly that. |
+|                                          |                                          |
+| Dot product                              | dotproduct(doc 1 closer - doc 2) > dotproduct(doc 3 farther doc4) |
+| Transended features                      | features such as text length are transendent probably, meaning it's a good feature because over time people use :) ad other smilies with trends but feature of text length is pretty much correct over time. |
+| Confusion matrix                         | confusionMatrix(realLabels, predictedLabels) => table columns: actual: ham/spam rows: what was predicted ham/spam, in this case we want to reduce false positive. |
+| Cosine Similarity                        | the angle between the two vectors. values [0,1] 0.9 does not mean 90% similar, however 0.9 vs 0.7 means 20% more similar. orks well also in high dimentions.  we then create a new feature of cosine similarity with the mean of all spam similarities.  <br />. https://www.youtube.com/watch?v=7cwBhWYHgsA&t=75s![cosine similarity](https://tinyurl.com/cosinesimilarity1) |
+| False Positive/Negative                  | Do me a favour first dfine what negative class is and what positive class is and only then talk about false positive and false negative. |
+| Accuracy metric                          | `(TP + TN) / (TP + TN + FP + FN)`        |
+| Semsitivity metric                       | (TP) / (TP + FN) (correct ham)           |
+| Speficity metric                         | TN / (TP + FN) (correct spam)            |
 | SVD no free lunch                        | 1. compute intensitve.  2. reduced factorized matrixes are approximations of origina.  3. project new data into the computed matrix. |
 | Truncated SVD                            | truncate(svd) => svd.output.take(top 300) // top n |
 | bag of words —> TFIDF —> SVD             | each matrix transormation improves quality of prediction.  without SVD we cannot do random forests as it would take long time. |
@@ -80,6 +95,7 @@ permalink: datascience-cheatsheet
 |                                          |                                          |
 | **Data Frame**                           |                                          |
 |                                          | DataFrame == Table == Matrix             |
+| R Dataframe                              | ` pt_data <- data.frame(subject_name, temperature, flu_status,  gender, blood, symptoms, stringsAsFactors = FALSE)` |
 | Word count example                       | <script src="https://gist.github.com/barkhorn/c419cfd9ba450bbaa868ed4bfea067b0.js"></script> |
 | Spark Session                            | `val spark = org.apache.spark.sql.SparkSession.builder().appName("someapp").getOrCreate()` |
 | Data Frame                               | <script src="https://gist.github.com/tomer-ben-david/7c3495ae903bb083b290ec9a69bdaffe.js"></script> |
@@ -111,6 +127,9 @@ permalink: datascience-cheatsheet
 | print 5 linked table                     | `print(x = track_metadata_tbl, n = 5, width = Inf)` |
 | Examine linked table structure summary   | `slimpse(track_metadata_tbl); str(track_metadata_tbl)` |
 |                                          | glimpse()                                |
+| **BigData**                              |                                          |
+| Columnar storage                         | A file is a column or section of file, instead of a row, imagine a column with country name, this means your compression of this column is much more effective therefore columnar storages tend to be much more effective.  Also some queries require a single column so faster. |
+| Parquest                                 | An implementation columnar storage, a file is a column (or section in file) |
 
 
 | Topic                     | HOWTO                                    |
@@ -122,3 +141,14 @@ permalink: datascience-cheatsheet
 | Data Science RND Workflow | https://alexioannides.com/2016/08/16/building-a-data-science-platform-for-rd-part-1-setting-up-aws/<br />Zeppelin, AWS, Spark |
 
 * AAS - Advanced Analytics with Spark
+
+
+
+
+
+|      |      |
+| ---- | ---- |
+|      |      |
+|      |      |
+|      |      |
+
