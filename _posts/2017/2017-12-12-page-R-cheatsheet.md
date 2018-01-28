@@ -13,6 +13,7 @@ permalink: r-cheatsheet
 | CheatSheet                   | https://www.rstudio.com/wp-content/uploads/2016/10/r-cheat-sheet-3.pdf |
 | Vector                       | create manually c(1,2,3) # => c is combine |
 | function                     | `term.frequency <- function(row) { row / sum(row) }` <br />`apply(someMatrix, 1, term.frequency)` # 1: rows, 2: cols |
+| new column with booleans     | `usedcars$conservative <-  usedcars$color %in% c("Black", "Gray", "Silver", "White")` |
 | **Matrix**                   |                                          |
 | Remove column                | `matrix[, -c[2,4]` # => remove columns 2,4 |
 | Filter get indexes           | `indexes <- matrix(somedata$Label == `spam`) # => all indexes of spam. |
@@ -38,8 +39,9 @@ permalink: r-cheatsheet
 | Add date to dateless lines   | * `dat$rep_date = rep(all_data[rep_date_entries], times = actions_per_day)`<br />* we know for each date how many times to repeat -> actions_per_day<br />rep means repeat, so repeat for dateless lines dat$rep_date<br />* new column added take the lines from all_data[rep_date_entries and for each such add] |
 | string to date               | dat$rep_date = strptime(dat$rep_date, "%Y-%m-%d") |
 | loop - apply                 | apply function over rows or cols of matrix `apply(mymatrix, 1, myfunc) # 1: do it on th erows of the my matrix |
-| **Plot**                     |                                          |
+| **Plot**                     | http://r-statistics.co/Top50-Ggplot2-Visualizations-MasterList-R-Code.html |
 |                              | <script src="https://gist.github.com/tomer-ben-david/bd9b1433a79072d2c04e1dae4d1d6b2d.js"></script> |
+| scatter plot                 | Explore relationship between 2 variables: `plot(x = carsData$year, y = carsData$price)` |
 | Resoures                     |                                          |
 | **NLP with R**               | https://www.youtube.com/watch?v=4vuw0AsHeGw |
 | nlp package                  | Quanteda (tokenization, filtering, ..)   |
