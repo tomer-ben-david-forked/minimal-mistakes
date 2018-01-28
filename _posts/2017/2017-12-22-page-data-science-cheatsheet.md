@@ -11,40 +11,6 @@ permalink: datascience-cheatsheet
 
 | **Spark Term**                           | **Description**                          |
 | ---------------------------------------- | ---------------------------------------- |
-| **Spark Architecture**                   | ![spark-architecture-diagram](https://spark.apache.org/docs/latest/img/cluster-overview.png) |
-| Spark Driver                             | sends work we have 1 of those.           |
-| Spark Worker                             | like multiple of them, we want enough RAM memory connecting to hdfs |
-| RDD                                      | Think distributed collection with good api, immutable, fault tolerant |
-| `#Partitions > #Executors`               | * Optimize: At least many partitions (shard) to data like num of executors<br />* So that each executor can work in parallel on some partition of the data |
-| Immutability                             | FirstRDD points to SecondRDD points to ThirdRDD (transformations) |
-| Fault Tolerance                          | If spark-worker fails work restarts on another spark-worker by spark-driver |
-| Partitioning                             | Data is broken into partitions 3         |
-| Worker node 1* Executor                  |                                          |
-| Transformations VS Actions               | * Transformations [Lazy]: map, flatMap, filter, groupBy, mapValues, ...<br />* Actions: take, count, collect, reduce, top |
-| **Skeleton Project**                     |                                          |
-| dependency                               | * "org.apache.spark" %% "spark-core"<br />* create fatJar in assembly |
-| **Use Spark**                            |                                          |
-| create SparkContext                      | * `val sparkConf = new SparkConf().setAppName("somename").set("spark.io.compress.codec", "lzf")` <br />* `val sc = new SparkContext(conf)`<br />* `main` standard java main method to run your code. |
-| submit it                                | `spark-submit com.mypackage.MySparkApp —master local[*] my-fat-jar-without-spark.jar` <br />// spark-submit is part of spark we downloaded<br />// [*] use cpu cores as many as you have<br />// To deploy to cluster you are going to have [many more params](https://spark.apache.org/docs/latest/submitting-applications.html) |
-| **Spark API**                            |                                          |
-| `spark-shell`                            | Explore the api with spark shell, already has spark context `sc` |
-| `sc.makeRDD(List(1,2))`                  |                                          |
-| `rdd.map`                                | `val myRdd = rdd.map(_ * 2)` // returns RDD |
-| `myRdd.collect()`                        | `Array(2,4)`                             |
-| `rdd.cache()`                            | So that if you have multiple `.action()` like `.collect()` data won't be referched for the transformations rdd again. |
-| **Local dev**                            |                                          |
-| Spark Dependency                         | <script src="https://gist.github.com/tomer-ben-david/9068a65e798e226a979765c359ae8b31.js"></script> |
-| Main                                     | `object SparkExample extends App<br />override def main(args: Array[String]): Unit = {` |
-| Spark conf and context                   | `val conf = new SparkConf().setAppName("parse my book").setMaster("local[*]")<br />val sc = new SparkContext(conf)` |
-| Load text from http                      | <script src="https://gist.github.com/tomer-ben-david/d94bcd0060b8a9acb04857903d71cd81.js"></script> |
-| Reduce by top words                      | <script src="https://gist.github.com/tomer-ben-david/5662e1e709a74e7a69cb7d942c822fbc.js"></script> |
-| **Performance**                          |                                          |
-| *ByKey                                   | reduceByKey much more efficient than reduce, no shuffle. *byKey. |
-| Driver Node RAM                          | Result < RAM on driver machine, result returned through driver Otherwise out of memory. |
-| minimize shuffles                        | The less you have the better spark will utilize data locallity and memory |
-| **Beginning NLP**                        |                                          |
-| High dimentionality                      | text analytics is a high dimentionality problem, it's not infrequent to have 100K features. |
-|                                          | Watch this great series here: https://www.youtube.com/playlist?list=PL8eNk_zTBST8olxIRFoo0YeXxEOkYdoxi |
 | Preprocessing                            |                                          |
 | Step 1: Observe                          | Observe the data, see what it is do some plotting |
 | Step 2: PreprocFilter                    | Casing, Puncutation, Numbers, Stop words, Symbols, Stemming |
@@ -106,6 +72,7 @@ permalink: datascience-cheatsheet
 | **Test Spark**                           |                                          |
 | SparkSuite                               | <script src="https://gist.github.com/tomer-ben-david/7531e451c62f10addb3c997f5b2d125e.js"></script> |
 | **Data Science Terms**                   |                                          |
+| Nearest Neightbouts KNN                  | `KNN(unlabeledData): labelOf(nearest neightbours)` .  Classification algorithm, used for OCR, movie recommendation. |
 | Binary Classification                    | The task of predicting a binary label. E.g., is an email spam or not spam? Should I show this ad to this user or not? Will it rain tomorrowor not? This section demonstrates algorithms for making these types of predictions. |
 | HyperLogLog                              | on machine 1 for each user => hll1.add(user), on machine 2: for each user hll2.add(user);  hll1.unify(hll2) .  hll.size() will return how many users estimation with low memory. |
 | Features in practice                     | look at your tabular data.  For example table of stocks, we want to find which are similar, let's say we are already told which are similar, we want to find a feature that cause them to be similar or different, in that field fieldx, we expect the similar stocks to have diff close to zero and for different stocks to see this field as close to 1 [AAS 38] |
@@ -130,6 +97,41 @@ permalink: datascience-cheatsheet
 | **BigData**                              |                                          |
 | Columnar storage                         | A file is a column or section of file, instead of a row, imagine a column with country name, this means your compression of this column is much more effective therefore columnar storages tend to be much more effective.  Also some queries require a single column so faster. |
 | Parquest                                 | An implementation columnar storage, a file is a column (or section in file) |
+| **Spark Architecture**                   | ![spark-architecture-diagram](https://spark.apache.org/docs/latest/img/cluster-overview.png) |
+| Spark Driver                             | sends work we have 1 of those.           |
+| Spark Worker                             | like multiple of them, we want enough RAM memory connecting to hdfs |
+| RDD                                      | Think distributed collection with good api, immutable, fault tolerant |
+| `#Partitions > #Executors`               | * Optimize: At least many partitions (shard) to data like num of executors<br />* So that each executor can work in parallel on some partition of the data |
+| Immutability                             | FirstRDD points to SecondRDD points to ThirdRDD (transformations) |
+| Fault Tolerance                          | If spark-worker fails work restarts on another spark-worker by spark-driver |
+| Partitioning                             | Data is broken into partitions 3         |
+| Worker node 1* Executor                  |                                          |
+| Transformations VS Actions               | * Transformations [Lazy]: map, flatMap, filter, groupBy, mapValues, ...<br />* Actions: take, count, collect, reduce, top |
+| **Skeleton Project**                     |                                          |
+| dependency                               | * "org.apache.spark" %% "spark-core"<br />* create fatJar in assembly |
+| **Use Spark**                            |                                          |
+| create SparkContext                      | * `val sparkConf = new SparkConf().setAppName("somename").set("spark.io.compress.codec", "lzf")` <br />* `val sc = new SparkContext(conf)`<br />* `main` standard java main method to run your code. |
+| submit it                                | `spark-submit com.mypackage.MySparkApp —master local[*] my-fat-jar-without-spark.jar` <br />// spark-submit is part of spark we downloaded<br />// [*] use cpu cores as many as you have<br />// To deploy to cluster you are going to have [many more params](https://spark.apache.org/docs/latest/submitting-applications.html) |
+| **Spark API**                            |                                          |
+| `spark-shell`                            | Explore the api with spark shell, already has spark context `sc` |
+| `sc.makeRDD(List(1,2))`                  |                                          |
+| `rdd.map`                                | `val myRdd = rdd.map(_ * 2)` // returns RDD |
+| `myRdd.collect()`                        | `Array(2,4)`                             |
+| `rdd.cache()`                            | So that if you have multiple `.action()` like `.collect()` data won't be referched for the transformations rdd again. |
+| **Local dev**                            |                                          |
+| Spark Dependency                         | <script src="https://gist.github.com/tomer-ben-david/9068a65e798e226a979765c359ae8b31.js"></script> |
+| Main                                     | `object SparkExample extends App<br />override def main(args: Array[String]): Unit = {` |
+| Spark conf and context                   | `val conf = new SparkConf().setAppName("parse my book").setMaster("local[*]")<br />val sc = new SparkContext(conf)` |
+| Load text from http                      | <script src="https://gist.github.com/tomer-ben-david/d94bcd0060b8a9acb04857903d71cd81.js"></script> |
+| Reduce by top words                      | <script src="https://gist.github.com/tomer-ben-david/5662e1e709a74e7a69cb7d942c822fbc.js"></script> |
+| **Performance**                          |                                          |
+| *ByKey                                   | reduceByKey much more efficient than reduce, no shuffle. *byKey. |
+| Driver Node RAM                          | Result < RAM on driver machine, result returned through driver Otherwise out of memory. |
+| minimize shuffles                        | The less you have the better spark will utilize data locallity and memory |
+| **Beginning NLP**                        |                                          |
+| High dimentionality                      | text analytics is a high dimentionality problem, it's not infrequent to have 100K features. |
+
+
 
 
 | Topic                     | HOWTO                                    |
@@ -141,14 +143,3 @@ permalink: datascience-cheatsheet
 | Data Science RND Workflow | https://alexioannides.com/2016/08/16/building-a-data-science-platform-for-rd-part-1-setting-up-aws/<br />Zeppelin, AWS, Spark |
 
 * AAS - Advanced Analytics with Spark
-
-
-
-
-
-|      |      |
-| ---- | ---- |
-|      |      |
-|      |      |
-|      |      |
-
