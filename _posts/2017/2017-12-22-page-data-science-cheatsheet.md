@@ -72,6 +72,67 @@ permalink: datascience-cheatsheet
 | scipy sparse matrixes | ofset we have sparse matrixes reduce waste (zeros) |
 |                       |                                          |
 
+```python
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+"""
+Created on Fri Feb  2 10:37:20 2018
+
+@author: tomer.bendavid
+"""
+## NLTK ##
+
+# import nltk
+
+# nltk.download()
+
+from nltk.book import text1
+from nltk import FreqDist
+
+text1.concordance("monstrous") # find all occurrences
+
+text1.similar("monstrous")
+
+text1.dispersion_plot(["citizens", "democracy"]) # location of words in text.
+
+len(text1) # len in words / tokens.
+
+sorted(set(text1))
+
+len(set(text1)) / len(text1) # lexical richness.
+
+text1.count("sun")
+
+text1[122] # word 122 -> ignorance
+
+text1.index('ignorance') # first index of word. -> 122
+
+text1[122:130] # ['ignorance', ',', 'the', 'letter', 'H', ',', 'which', 'almost']
+
+text1[:3] # ['[', 'Moby', 'Dick']
+
+greekName = 'oedipus' # it's a string
+greekName[2:] # 'diphus'
+
+## Simple Statistics nlp ##
+
+sorted(FreqDist(text1))[0:5] # ['!', '!"', '!"--', "!'", '!\'"']
+FreqDist(text1).most_common(5) # [(',', 18713), ('the', 13721), ('.', 6862), ('of', 6536), ('and', 6024)]
+
+FreqDist(text1).plot(50, cumulative=True) # log plot!
+
+FreqDist(text1).hapaxes() # words that appear only once - hapaxes - 'commonalty', 'police', ...
+
+[w for w in set(text1) if len(w) > 15] # words with length > 15 ['uncompromisedness', '...', ...
+
+# select important words
+
+freqDist = FreqDist(text1)
+sorted(w for w in set(text1) if len(w) > 7 and freqDist[w] > 7) # important words! longer than 7 and appear more than 7 times! 'articles' ...
+
+# Collocations and bigrams
+```
+
 
 
 
@@ -178,7 +239,7 @@ If you have no time for the above I still highly recommend you to install RStudi
 
 You can also move on and do machine learning in R, it has extremely powerful libraries for that (rpart, caret, e1071, …) and by all means if you and your teams are fluent with it feel free to move on, but me personally would use it only for speculations and quick analysis or quick models, I stop there, it can be very quick but *this is when I turn to language number 2 python*.
 
-**Use Python for small to medium sized data processing applications. **Python tough introduced some type checking in recent releases (which is awesome), is an interpreted language as such you have the great benefit of speed of programming. You just write your code and run. However the caveat is that you don’t have the amazing compiler and features (the good ones not the kitchen sink one) from scala. Therefore as long as your project is small to medium sized.
+**Use Python for small to medium sized data processing applications**. Python tough introduced some type checking in recent releases (which is awesome), is an interpreted language (just like R) but it's a more of a standard programming language, as such you have the great benefit of speed of programming. You just write your code and run. However the caveat is that you don’t have the amazing compiler and features (the good ones not the kitchen sink one) from scala. Therefore as long as your project is small to medium sized.
 
 It is going to be very helpful as you will utilize NLTK, matplotlib, numpy, pandas, and you will have great time and happy path learning and using them. This will take you on the fast route to machine learning, with great examples bundled in the libraries.
 
