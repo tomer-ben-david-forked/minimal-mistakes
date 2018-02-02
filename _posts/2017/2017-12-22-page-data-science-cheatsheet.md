@@ -75,6 +75,7 @@ permalink: datascience-cheatsheet
 ```python
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
+# based on nltk book http://www.nltk.org/book
 """
 Created on Fri Feb  2 10:37:20 2018
 
@@ -82,12 +83,13 @@ Created on Fri Feb  2 10:37:20 2018
 """
 ## NLTK ##
 
-# import nltk
+# !! run below at least one time !!.
+#import nltk
 
-# nltk.download()
+#nltk.download()
 
 from nltk.book import text1
-from nltk import FreqDist
+from nltk import FreqDist, bigrams
 
 text1.concordance("monstrous") # find all occurrences
 
@@ -131,6 +133,14 @@ freqDist = FreqDist(text1)
 sorted(w for w in set(text1) if len(w) > 7 and freqDist[w] > 7) # important words! longer than 7 and appear more than 7 times! 'articles' ...
 
 # Collocations and bigrams
+
+# Collocations words that appear often with meaning 'red wine'
+
+list(bigrams(['I', 'like', 'pottatos'])) # [('I', 'like'), ('like', 'pottatos')]
+
+text1.collocations() # Sperm Whale; Moby Dick; White Whale
+
+
 ```
 
 
