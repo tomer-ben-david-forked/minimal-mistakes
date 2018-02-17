@@ -12,6 +12,7 @@ permalink: datascience-cheatsheet
 | **Spark Term**                                               | **Description**                                              |
 | ------------------------------------------------------------ | ------------------------------------------------------------ |
 | SciPy 2016 Video Tutorial                                    | [Machine Learning Part 1 \| SciPy 2016 Tutorial \| Andreas Mueller & Sebastian Raschka](https://www.youtube.com/watch?v=OB1reY6IX-o) |
+| Spreadsheet                                                  | Think of data as spreadsheet                                 |
 | Statistical learning                                         | Output = f(input) # => f(inputVariable) or f(inputVector), or f(independent variables) or Y = F(X) // X1,X2,.. |
 | Programming learning                                         | OutputAttributes = Program(InputAttributes) or Program(InputFeatures) or Model = Algorithm(Data) |
 | Error                                                        | Y = f(X) + e # => You learn a function!                      |
