@@ -9,60 +9,72 @@ permalink: datascience-cheatsheet
 
 ## General Data Science
 
-| **Spark Term**                           | **Description**                          |
-| ---------------------------------------- | ---------------------------------------- |
-| SciPy 2016 Video Tutorial                | [Machine Learning Part 1 \| SciPy 2016 Tutorial \| Andreas Mueller & Sebastian Raschka](https://www.youtube.com/watch?v=OB1reY6IX-o) |
-| Matrix                                   | rows: observations, our datadata. columns - features.  Get used to it. |
-| Sparse Matrix                            | matrix who's most rows are zeros         |
-| Classification vs Regression             | classification(input) => spam/notspam (categorical)<br />regression(input) => bitcoin price (continous outcome) |
-| Preprocessing                            | Cleanup data, stem                       |
-| Step 1: Observe                          | Observe the data, see what it is do some plotting |
-| Step 2: PreprocFilter                    | Casing, Puncutation, Numbers, Stop words, Symbols, Stemming |
-| Step 3: Tokenization                     | Tokenization                             |
-| Step 4: DFM                              | Document Frequency Matrix, high dimention. with DFM we had high dimention we have the below line for each text message, so we need to do diemntion reduction.![doc freq matrix](https://tinyurl.com/docfreqmatrix) |
-| Step 5: Create Model                     | Use `cross validation`                   |
-| Step 5.1: Decision Tree Model based on Bag of words | Simplest model, based on bag of words, word count |
-| Step 5.2: Tune: Normalize doc length     | Normalize based on doc length it's obvious that the longer the document is the higher the count of words it would have for each of the above, we need to normalize.  `TF frequnecy(word) / sum(frequency(all words)) so we normalize to the proportioin of the count of word in doc relative to other words` |
-| Step 5.3: Tune: TF-IDF                   | Penalize words that appear cross corpus. `IDF(t) = log (N number of docs / count(t))` so if term appears on all docs log( 44 / 44) == 0 so we don't take into account that word. |
-| Step 6: ngram                            | We counted for single words 1-gram but can we count cobination of words? ngram is not combination of words it's just consequetive words 2gram each 2 consequetive words.  bigram more than 2X matrix size.  The curse of dimentionality problem.  This creates a very sparse matrix. |
-| Step 7: Random Forest                    | Bigram can reduce the accuracy! so we would need to combine them with Random Forests. |
-| Step 7.1: LSA - Latent Semantic Analysis | Money, Loan, … => collapse to => Depth! Matrix Factoriation : Feature reduction, based on dot product of similar docs, reduce them, based on SVD - singular value decomposition - decompose a matrix - break it down into smaller chunks, reduce the huge size of our ngram sparse matrix.  Which will allow us to use Step 7 random forsest otherwise would take too much time.  Geometrically how close are two vectors (two rows each row is a vector), dot product gives an estimation of how close two vectors are, it's less precise than cosine correlation but it's part of it.<br />LSA - collapses together the term-document and document-term (rows and columsn) and treats them together collapse both to higher order construct. |
-| Step 8: Random Forest                    | Now that we collapsed the matrix we run a much better algorithm random forest and improe results by 2% . |
-| Step 9: Specifity/Sensitivity            | Decide if you prefer sensitivity or specifity and do feature engineering to prefer accuracy in one of them.  Example add feature $textLength we saw from visual plot that long emais are spam.  Repeat the model creation.  Feel free to also look if your accuracy and specifity and sensitivity are all gong up. |
-| Step 10: Feature engineering VarImpPlot  | check which features are important.  In many cases the feature you engineer as a human like the textLength are far far more important and predict much much well than the discovered features, this is where you as a data scientist add value - feature engineering.<br />Among the engineered features: #1 spam similarity.  #2 Text langth  howeverif some feature is like too much good i predicting it can be an indicatin of overfitting. |
-| Step 10.1: Adding cosine similarity engineered feature |                                          |
-| Step 11: Test - Test Data                | You need to make sure your columns in test data are same in size and meaning as in train data.  R "dfm_select" does exactly that. |
-|                                          |                                          |
-| Dot product                              | dotproduct(doc 1 closer - doc 2) > dotproduct(doc 3 farther doc4) |
-| Transended features                      | features such as text length are transendent probably, meaning it's a good feature because over time people use :) ad other smilies with trends but feature of text length is pretty much correct over time. |
-| Confusion matrix                         | confusionMatrix(realLabels, predictedLabels) => table columns: actual: ham/spam rows: what was predicted ham/spam, in this case we want to reduce false positive. |
-| Cosine Similarity                        | the angle between the two vectors. values [0,1] 0.9 does not mean 90% similar, however 0.9 vs 0.7 means 20% more similar. orks well also in high dimentions.  we then create a new feature of cosine similarity with the mean of all spam similarities.  <br />. https://www.youtube.com/watch?v=7cwBhWYHgsA&t=75s![cosine similarity](https://tinyurl.com/cosinesimilarity1) |
-| False Positive/Negative                  | Do me a favour first dfine what negative class is and what positive class is and only then talk about false positive and false negative. |
-| Accuracy metric                          | `(TP + TN) / (TP + TN + FP + FN)`        |
-| Semsitivity metric                       | (TP) / (TP + FN) (correct ham)           |
-| Speficity metric                         | TN / (TP + FN) (correct spam)            |
-| SVD no free lunch                        | 1. compute intensitve.  2. reduced factorized matrixes are approximations of origina.  3. project new data into the computed matrix. |
-| Truncated SVD                            | truncate(svd) => svd.output.take(top 300) // top n |
-| bag of words —> TFIDF —> SVD             | each matrix transormation improves quality of prediction.  without SVD we cannot do random forests as it would take long time. |
-| Vectors Dot product on rows              | an estimation of how close two vectors are, it's less precise than cosine correlation but it's part of it.  DOT product of all docs (rows) is X * X transpose. |
-| Dot product on columns terms             | how close is each term one to another loan, money, … (if appears in similar docs) |
-| Term collapse                            | So terms that are close in meaning, we can collapse to reduce matrix size |
-| Cleanup                                  | Remove whitespaces, split by new lines, ... |
-| Remove header                            | `val noHeader = rdd.filter(!_.contains("something from first line"))` |
-| Clean Text                               | tokenize, remove whitespaces, filter empty strings, wors to lower case |
-| Load text                                | `scala.io.Source.fromURL("http://www.gutenberg.org/files/2701/2701-0.txt").mkString` |
-| Spark reads with list                    | `mobyDickText.split("\n")`               |
-| to RDD                                   | `sc.parallelize(mobyDickLines)`          |
-| Tokenize                                 | `mobyDickRDD.flatMap(_.split("[^0-9a-zA-Z]"))` |
-| Remove empty                             | `.filter(!_.isEmpty)`                    |
-| Lower case                               | `.map(_.toLowerCase())`                  |
-| Compute                                  | Word count                               |
-| map 1 for each word                      | `.map((_, 1))`                           |
-| Count for each word                      | `.reduceByKey(_ + _)`                    |
-| Take top 10                              | `.takeOrdered(10)(Ordering[Int].reverse.on(_._2))` |
-| Print                                    | `.foreach(println)`                      |
+| **Spark Term**                                               | **Description**                                              |
+| ------------------------------------------------------------ | ------------------------------------------------------------ |
+| SciPy 2016 Video Tutorial                                    | [Machine Learning Part 1 \| SciPy 2016 Tutorial \| Andreas Mueller & Sebastian Raschka](https://www.youtube.com/watch?v=OB1reY6IX-o) |
+| Statistical learning                                         | Output = f(input) # => f(inputVariable) or f(inputVector), or f(independent variables) or Y = F(X) // X1,X2,.. |
+| Programming learning                                         | OutputAttributes = Program(InputAttributes) or Program(InputFeatures) or Model = Algorithm(Data) |
+| Error                                                        | Y = f(X) + e # => You learn a function!                      |
+| Parametric learning                                          | No matter how much data you throw on it, it will still need these parameters like a line Y = ax + b (logistic regression, linear discriminant analysis, perceptron) |
+| Non parametric learning                                      | They fit differnet forms it's not a single form with parameters, like Decision Trees, Naive Bayes, Support vector machines, k means.  Require lot more data. |
+| Supervised                                                   | You have a teacher he knows the answer, classification, regression |
+| Non supervised                                               | No teacher, clustering, association                          |
+| Semi supervised                                              | Some can be with a teacher                                   |
+| Bias Variance Trade Off                                      | Bias Error (model assumptions), Variance Error, Irreducable Error. Increasing bias error reduce variance, increase variance will decrease bias |
+| Avoiding overfitting                                         | Resampling to estimate model accuracy, Hold back validation dataset, Cross validation. |
+| Gradiant Descent                                             | Optimization - almost every machine learning algorithm uses optimisation at it's core, optimising the target function.  Local minimum.  start with 0 `coefficient = 0.0`.  `cost = evaluate(f(coefficient))`.  Update coefficient downhill with derivative.  `coefficient = coefficient - (alpha * delta)`.  alpha learning parameter. |
+| Stochastic Gradiant Descent                                  | Have large amounts of data, update to coefficients is foe each training instance, not in batch, as we have random data we move quickly. |
+| Matrix                                                       | rows: observations, our datadata. columns - features.  Get used to it. |
+| Sparse Matrix                                                | matrix who's most rows are zeros                             |
+| Classification vs Regression                                 | classification(input) => spam/notspam (categorical)<br />regression(input) => bitcoin price (continous outcome) |
+| Preprocessing                                                | Cleanup data, stem                                           |
+| Step 1: Observe                                              | Observe the data, see what it is do some plotting            |
+| Step 2: PreprocFilter                                        | Casing, Puncutation, Numbers, Stop words, Symbols, Stemming  |
+| Step 3: Tokenization                                         | Tokenization                                                 |
+| Step 4: DFM                                                  | Document Frequency Matrix, high dimention. with DFM we had high dimention we have the below line for each text message, so we need to do diemntion reduction.![doc freq matrix](https://tinyurl.com/docfreqmatrix) |
+| Step 5: Create Model                                         | Use `cross validation`                                       |
+| Step 5.1: Decision Tree Model based on Bag of words          | Simplest model, based on bag of words, word count            |
+| Step 5.2: Tune: Normalize doc length                         | Normalize based on doc length it's obvious that the longer the document is the higher the count of words it would have for each of the above, we need to normalize.  `TF frequnecy(word) / sum(frequency(all words)) so we normalize to the proportioin of the count of word in doc relative to other words` |
+| Step 5.3: Tune: TF-IDF                                       | Penalize words that appear cross corpus. `IDF(t) = log (N number of docs / count(t))` so if term appears on all docs log( 44 / 44) == 0 so we don't take into account that word. |
+| Step 6: ngram                                                | We counted for single words 1-gram but can we count cobination of words? ngram is not combination of words it's just consequetive words 2gram each 2 consequetive words.  bigram more than 2X matrix size.  The curse of dimentionality problem.  This creates a very sparse matrix. |
+| Step 7: Random Forest                                        | Bigram can reduce the accuracy! so we would need to combine them with Random Forests. |
+| Step 7.1: LSA - Latent Semantic Analysis                     | Money, Loan, … => collapse to => Depth! Matrix Factoriation : Feature reduction, based on dot product of similar docs, reduce them, based on SVD - singular value decomposition - decompose a matrix - break it down into smaller chunks, reduce the huge size of our ngram sparse matrix.  Which will allow us to use Step 7 random forsest otherwise would take too much time.  Geometrically how close are two vectors (two rows each row is a vector), dot product gives an estimation of how close two vectors are, it's less precise than cosine correlation but it's part of it.<br />LSA - collapses together the term-document and document-term (rows and columsn) and treats them together collapse both to higher order construct. |
+| Step 8: Random Forest                                        | Now that we collapsed the matrix we run a much better algorithm random forest and improe results by 2% . |
+| Step 9: Specifity/Sensitivity                                | Decide if you prefer sensitivity or specifity and do feature engineering to prefer accuracy in one of them.  Example add feature $textLength we saw from visual plot that long emais are spam.  Repeat the model creation.  Feel free to also look if your accuracy and specifity and sensitivity are all gong up. |
+| Step 10: Feature engineering VarImpPlot                      | check which features are important.  In many cases the feature you engineer as a human like the textLength are far far more important and predict much much well than the discovered features, this is where you as a data scientist add value - feature engineering.<br />Among the engineered features: #1 spam similarity.  #2 Text langth  howeverif some feature is like too much good i predicting it can be an indicatin of overfitting. |
+| Step 10.1: Adding cosine similarity engineered feature       |                                                              |
+| Step 11: Test - Test Data                                    | You need to make sure your columns in test data are same in size and meaning as in train data.  R "dfm_select" does exactly that. |
+|                                                              |                                                              |
+| Dot product                                                  | dotproduct(doc 1 closer - doc 2) > dotproduct(doc 3 farther doc4) |
+| Transended features                                          | features such as text length are transendent probably, meaning it's a good feature because over time people use :) ad other smilies with trends but feature of text length is pretty much correct over time. |
+| Confusion matrix                                             | confusionMatrix(realLabels, predictedLabels) => table columns: actual: ham/spam rows: what was predicted ham/spam, in this case we want to reduce false positive. |
+| Cosine Similarity                                            | the angle between the two vectors. values [0,1] 0.9 does not mean 90% similar, however 0.9 vs 0.7 means 20% more similar. orks well also in high dimentions.  we then create a new feature of cosine similarity with the mean of all spam similarities.  <br />. https://www.youtube.com/watch?v=7cwBhWYHgsA&t=75s![cosine similarity](https://tinyurl.com/cosinesimilarity1) |
+| False Positive/Negative                                      | Do me a favour first dfine what negative class is and what positive class is and only then talk about false positive and false negative. |
+| Accuracy metric                                              | `(TP + TN) / (TP + TN + FP + FN)`                            |
+| Semsitivity metric                                           | (TP) / (TP + FN) (correct ham)                               |
+| Speficity metric                                             | TN / (TP + FN) (correct spam)                                |
+| SVD no free lunch                                            | 1. compute intensitve.  2. reduced factorized matrixes are approximations of origina.  3. project new data into the computed matrix. |
+| Truncated SVD                                                | truncate(svd) => svd.output.take(top 300) // top n           |
+| bag of words —> TFIDF —> SVD                                 | each matrix transormation improves quality of prediction.  without SVD we cannot do random forests as it would take long time. |
+| Vectors Dot product on rows                                  | an estimation of how close two vectors are, it's less precise than cosine correlation but it's part of it.  DOT product of all docs (rows) is X * X transpose. |
+| Dot product on columns terms                                 | how close is each term one to another loan, money, … (if appears in similar docs) |
+| Term collapse                                                | So terms that are close in meaning, we can collapse to reduce matrix size |
+| Cleanup                                                      | Remove whitespaces, split by new lines, ...                  |
+| Remove header                                                | `val noHeader = rdd.filter(!_.contains("something from first line"))` |
+| Clean Text                                                   | tokenize, remove whitespaces, filter empty strings, wors to lower case |
+| Load text                                                    | `scala.io.Source.fromURL("http://www.gutenberg.org/files/2701/2701-0.txt").mkString` |
+| Spark reads with list                                        | `mobyDickText.split("\n")`                                   |
+| to RDD                                                       | `sc.parallelize(mobyDickLines)`                              |
+| Tokenize                                                     | `mobyDickRDD.flatMap(_.split("[^0-9a-zA-Z]"))`               |
+| Remove empty                                                 | `.filter(!_.isEmpty)`                                        |
+| Lower case                                                   | `.map(_.toLowerCase())`                                      |
+| Compute                                                      | Word count                                                   |
+| map 1 for each word                                          | `.map((_, 1))`                                               |
+| Count for each word                                          | `.reduceByKey(_ + _)`                                        |
+| Take top 10                                                  | `.takeOrdered(10)(Ordering[Int].reverse.on(_._2))`           |
+| Print                                                        | `.foreach(println)`                                          |
 | Document Frequency Matrix == Bag of words (order not preserved) | Rows: datums (sms..), Columns: token (after tokenization), cell: count(datum, token), de fator standard for classification. ![doc freq matrix](https://tinyurl.com/docfreqmatrix) (ref: https://youtu.be/Y7385dGRNLM)<br />Order not preserved: Bag of Words<br />ngram: you add back the word ordering<br />Especially useful for classification: spam, .. |
-| Stratification                           | You want the correct nature propotions of data rows, if you have 2 percent pink cows in nature you want it also on your dataset. |
+| Stratification                                               | You want the correct nature propotions of data rows, if you have 2 percent pink cows in nature you want it also on your dataset. |
 
 ## Python
 
