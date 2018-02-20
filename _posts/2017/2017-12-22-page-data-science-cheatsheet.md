@@ -67,7 +67,11 @@ permalink: datascience-cheatsheet
 | Spark reads with list                                        | `mobyDickText.split("\n")`                                   |
 | to RDD                                                       | `sc.parallelize(mobyDickLines)`                              |
 | Tokenize                                                     | `mobyDickRDD.flatMap(_.split("[^0-9a-zA-Z]"))`               |
-| Remove empty                                                 | `.filter(!_.isEmpty)`                                        |
+| Remove empty                                                 | `.filter(!_.isEmpty)`  
+                                      ```scala
+                                      val a = 2
+                                      val b = 2
+                                      ```|
 | Lower case                                                   | `.map(_.toLowerCase())`                                      |
 | Compute                                                      | Word count                                                   |
 | map 1 for each word                                          | `.map((_, 1))`                                               |

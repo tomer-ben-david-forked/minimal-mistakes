@@ -1,10 +1,14 @@
 ---
-
 title:  "Scala CheatSheet"
-date:   2015-05-22 22:18:00
+date:   2018-02-20 22:18:00
 categories: scala
 comments: true
+permalink: scala-primer
 ---
+```scala
+BigDecimal(1.002).setScale(2, BigDecimal.RoundingMode.HALF_UP).doubleValue() // Round double to #.##
+```
+
 
 
 | Category      | Code                                     |
