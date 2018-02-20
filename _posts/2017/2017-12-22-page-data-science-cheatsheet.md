@@ -9,9 +9,17 @@ permalink: datascience-cheatsheet
 
 ## General Data Science
 
+**General Terms**
+
+```bash
+Spreadsheet           # => Think of data as spreadsheet
+Statistical learning  # => Output = f(input) # => f(inputVariable) or f(inputVector), or f(independent variables) or Y = F(X) // X1,X2,..
+Programming learning  # => OutputAttributes = Program(InputAttributes) or Program(InputFeatures) or Model = Algorithm(Data)
+Error                 # => Y = f(X) + e # => You learn a function!
+```
+
 | **Spark Term**                                               | **Description**                                              |
 | ------------------------------------------------------------ | ------------------------------------------------------------ |
-| SciPy 2016 Video Tutorial                                    | [Machine Learning Part 1 \| SciPy 2016 Tutorial \| Andreas Mueller & Sebastian Raschka](https://www.youtube.com/watch?v=OB1reY6IX-o) |
 | Spreadsheet                                                  | Think of data as spreadsheet                                 |
 | Statistical learning                                         | Output = f(input) # => f(inputVariable) or f(inputVector), or f(independent variables) or Y = F(X) // X1,X2,.. |
 | Programming learning                                         | OutputAttributes = Program(InputAttributes) or Program(InputFeatures) or Model = Algorithm(Data) |
@@ -45,6 +53,7 @@ permalink: datascience-cheatsheet
 | Step 10: Feature engineering VarImpPlot                      | check which features are important.  In many cases the feature you engineer as a human like the textLength are far far more important and predict much much well than the discovered features, this is where you as a data scientist add value - feature engineering.<br />Among the engineered features: #1 spam similarity.  #2 Text langth  howeverif some feature is like too much good i predicting it can be an indicatin of overfitting. |
 | Step 10.1: Adding cosine similarity engineered feature       |                                                              |
 | Step 11: Test - Test Data                                    | You need to make sure your columns in test data are same in size and meaning as in train data.  R "dfm_select" does exactly that. |
+| SciPy 2016 Video Tutorial                                    | [Machine Learning Part 1 \| SciPy 2016 Tutorial \| Andreas Mueller & Sebastian Raschka](https://www.youtube.com/watch?v=OB1reY6IX-o) |
 |                                                              |                                                              |
 | Dot product                                                  | dotproduct(doc 1 closer - doc 2) > dotproduct(doc 3 farther doc4) |
 | Transended features                                          | features such as text length are transendent probably, meaning it's a good feature because over time people use :) ad other smilies with trends but feature of text length is pretty much correct over time. |
@@ -67,11 +76,7 @@ permalink: datascience-cheatsheet
 | Spark reads with list                                        | `mobyDickText.split("\n")`                                   |
 | to RDD                                                       | `sc.parallelize(mobyDickLines)`                              |
 | Tokenize                                                     | `mobyDickRDD.flatMap(_.split("[^0-9a-zA-Z]"))`               |
-| Remove empty                                                 | `.filter(!_.isEmpty)`  
-                                      ```scala
-                                      val a = 2
-                                      val b = 2
-                                      ```|
+| Remove empty                                                 | `.filter(!_.isEmpty)`                                        |
 | Lower case                                                   | `.map(_.toLowerCase())`                                      |
 | Compute                                                      | Word count                                                   |
 | map 1 for each word                                          | `.map((_, 1))`                                               |
