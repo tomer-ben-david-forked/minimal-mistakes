@@ -1,5 +1,5 @@
 ---
-title:  "Scala CheatSheet"
+title:  "Scala Primer"
 date:   2018-02-20 22:18:00
 categories: scala
 comments: true
