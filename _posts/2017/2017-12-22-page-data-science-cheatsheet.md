@@ -6,7 +6,6 @@ comments: true
 permalink: datascience-cheatsheet
 ---
 
-
 ## General Data Science
 
 **General Terms**
@@ -103,6 +102,14 @@ Created on Fri Feb  2 10:37:20 2018
 
 @author: tomer.bendavid
 """
+## TOOLS ##
+## Spyder ##
+
+spyder # => run from command line to start spyder.
+
+TAB # => method code complention.
+SHIFT+TAB # => arguments code complention.  
+
 ## NLTK ##
 
 # !! run below at least one time !!.
@@ -114,27 +121,16 @@ from nltk.book import text1
 from nltk import FreqDist, bigrams
 
 text1.concordance("monstrous") # find all occurrences
-
 text1.similar("monstrous")
-
 text1.dispersion_plot(["citizens", "democracy"]) # location of words in text.
-
 len(text1) # len in words / tokens.
-
 sorted(set(text1))
-
 len(set(text1)) / len(text1) # lexical richness.
-
 text1.count("sun")
-
 text1[122] # word 122 -> ignorance
-
 text1.index('ignorance') # first index of word. -> 122
-
 text1[122:130] # ['ignorance', ',', 'the', 'letter', 'H', ',', 'which', 'almost']
-
 text1[:3] # ['[', 'Moby', 'Dick']
-
 greekName = 'oedipus' # it's a string
 greekName[2:] # 'diphus'
 
@@ -142,9 +138,7 @@ greekName[2:] # 'diphus'
 
 sorted(FreqDist(text1))[0:5] # ['!', '!"', '!"--', "!'", '!\'"']
 FreqDist(text1).most_common(5) # [(',', 18713), ('the', 13721), ('.', 6862), ('of', 6536), ('and', 6024)]
-
 FreqDist(text1).plot(50, cumulative=True) # log plot!
-
 FreqDist(text1).hapaxes() # words that appear only once - hapaxes - 'commonalty', 'police', ...
 
 [w for w in set(text1) if len(w) > 15] # words with length > 15 ['uncompromisedness', '...', ...
@@ -159,10 +153,7 @@ sorted(w for w in set(text1) if len(w) > 7 and freqDist[w] > 7) # important word
 # Collocations words that appear often with meaning 'red wine'
 
 list(bigrams(['I', 'like', 'pottatos'])) # [('I', 'like'), ('like', 'pottatos')]
-
 text1.collocations() # Sperm Whale; Moby Dick; White Whale
-
-
 ```
 
 

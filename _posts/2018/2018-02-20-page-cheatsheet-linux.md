@@ -3,6 +3,7 @@
 title:  "Linux cheasheet"
 date:   2017-03-13 22:18:00
 categories: cheatsheet,linux,bash,centos
+permalink: linux-primer
 comments: true
 ---
 **Pass result of `awk` into `kill` or another command**
@@ -106,6 +107,15 @@ cp -ar /mnt/Packages/*.* /var/ftp/pub/localrepo/ # => copy an existing repo to y
 
 vi /etc/yum.repos.d/localrepo.repo # => point to the local repo.
 ```
+
+## ITerm
+
+```bash
+# iterm Keyboard Shortcuts
+ALT+CMD+A # => notify when command completes. (one time enable shell integration from menu)
+```
+
+
 
 [https://www.unixmen.com/setup-local-yum-repository-centos-7/](https://www.unixmen.com/setup-local-yum-repository-centos-7/)
 

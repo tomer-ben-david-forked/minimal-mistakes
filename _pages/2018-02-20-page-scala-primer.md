@@ -5,11 +5,10 @@ categories: scala
 comments: true
 permalink: scala-primer
 ---
+
 ```scala
 BigDecimal(1.002).setScale(2, BigDecimal.RoundingMode.HALF_UP).doubleValue() // Round double to #.##
 ```
-
-
 
 | Category      | Code                                     |
 | ------------- | ---------------------------------------- |
