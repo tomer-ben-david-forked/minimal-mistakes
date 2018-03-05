@@ -1,5 +1,4 @@
 ---
-
 title:  "Couchbase Primer"
 date:   2018-03-05 05:18:00
 categories: db
