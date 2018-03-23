@@ -1,11 +1,3 @@
----
-title:  "Security Primer"
-date:   2018-03-23 05:18:00
-categories: security
-permalink: security-primer
-comments: true
----
-
  Security
 
 # Basic
@@ -25,6 +17,14 @@ comments: true
 ### Service provider
 
 ### Identity provider
+
+```bash
+git config --system # => /etc/gitconfig
+
+git config --global # => ~/.gitconfig or ~/.config/git/config
+
+git config --local # => .git/config
+```
 
 ## Provides Standard SSO
 
@@ -48,10 +48,40 @@ comments: true
 
 ## Authorization: Bearer <access token>
 
-# JWT
+## JWT
+
+### Extension of OAuth 2.0
+
+#### access token with claims
+
+#### Authorization: Bearer <JWT>
+
+##### header, payload, signature
+
+#### HMAC-SHA256
+
+##### hash with secret key to compute signature
+
+### Stateless data api data repassed from client
+
+#### instead of traditional session on server
+
+### Usage
+
+#### Authentication
+
+#### Secure information exchange
+
+##### signed with public/private keys verify content was not tampered
 
 # API Keys
 
 ## identify caller/application
 
 ## monetize api
+
+### jkhjkhjkhkjhkhkhjkhkj sdkjfslkfjklsdjfkls skdjhfskjfhkjshfdkjs sakdjfhskjdfhkjsdhf
+
+# Resources
+
+## dzone rest security refcardz

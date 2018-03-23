@@ -3,7 +3,7 @@
 <node TEXT="Security" FOLDED="false" ID="ID_1188426456" CREATED="1521798543075" MODIFIED="1521798548539" STYLE="oval">
 <font SIZE="18"/>
 <hook NAME="MapStyle">
-    <properties edgeColorConfiguration="#808080ff,#ff0000ff,#0000ffff,#00ff00ff,#ff00ffff,#00ffffff,#7c0000ff,#00007cff,#007c00ff,#7c007cff,#007c7cff,#7c7c00ff" fit_to_viewport="false"/>
+    <properties fit_to_viewport="false" show_note_icons="true" edgeColorConfiguration="#808080ff,#ff0000ff,#0000ffff,#00ff00ff,#ff00ffff,#00ffffff,#7c0000ff,#00007cff,#007c00ff,#7c007cff,#007c7cff,#7c7c00ff"/>
 
 <map_styles>
 <stylenode LOCALIZED_TEXT="styles.root_node" STYLE="oval" UNIFORM_SHAPE="true" VGAP_QUANTITY="24.0 pt">
@@ -63,11 +63,16 @@
 </stylenode>
 </map_styles>
 </hook>
-<hook NAME="AutomaticEdgeColor" COUNTER="5" RULE="ON_BRANCH_CREATION"/>
+<hook NAME="AutomaticEdgeColor" COUNTER="6" RULE="ON_BRANCH_CREATION"/>
+<hook NAME="presentations">
+    <presentation NAME="New presentation 1">
+        <slide NAME="New slide 1"/>
+    </presentation>
+</hook>
 <node TEXT="Basic" POSITION="right" ID="ID_1712387241" CREATED="1521798558077" MODIFIED="1521798561745">
 <edge COLOR="#00ff00"/>
-<node TEXT="Authorization: Basic Base64(user,pass)" ID="ID_1417872357" CREATED="1521798647030" MODIFIED="1521798672099">
-<node TEXT="cleartext use https for encryption" ID="ID_1889852296" CREATED="1521798675159" MODIFIED="1521798835301"/>
+<node TEXT="Authorization: Basic Base64(user,pass)" ID="ID_1417872357" CREATED="1521798647030" MODIFIED="1521804791010">
+<node TEXT="cleartext use https for encryption" LOCALIZED_STYLE_REF="defaultstyle.note" ID="ID_1889852296" CREATED="1521798675159" MODIFIED="1521805002112"/>
 </node>
 </node>
 <node TEXT="SAML" POSITION="right" ID="ID_435427962" CREATED="1521798549016" MODIFIED="1521798550944">
@@ -76,7 +81,7 @@
 <node TEXT="XML" ID="ID_481214290" CREATED="1521798905967" MODIFIED="1521798907108"/>
 <node TEXT="Parties" ID="ID_1536369800" CREATED="1521799064763" MODIFIED="1521799066204">
 <node TEXT="Service provider" ID="ID_473544859" CREATED="1521799053763" MODIFIED="1521799061517"/>
-<node TEXT="Identity provider" ID="ID_1467783301" CREATED="1521799073086" MODIFIED="1521799085923"/>
+<node TEXT="Identity provider" LOCALIZED_STYLE_REF="defaultstyle.details" ID="ID_1467783301" CREATED="1521799073086" MODIFIED="1521813522489"/>
 </node>
 <node TEXT="Provides Standard SSO" ID="ID_1196888693" CREATED="1521799095732" MODIFIED="1521799102711">
 <node TEXT="Authentication exchanged with digitally signed XML" ID="ID_1050738871" CREATED="1521799111374" MODIFIED="1521799130045"/>
@@ -93,14 +98,37 @@
 <node TEXT="getAccessToken(refreshToken)" ID="ID_431200191" CREATED="1521799333397" MODIFIED="1521799343073"/>
 </node>
 <node TEXT="Authorization: Bearer &lt;access token&gt;" ID="ID_11649262" CREATED="1521799356048" MODIFIED="1521799367026"/>
+<node TEXT="JWT" ID="ID_296029072" CREATED="1521798613695" MODIFIED="1521802162090">
+<node TEXT="Extension of OAuth 2.0" ID="ID_581699392" CREATED="1521802179242" MODIFIED="1521802194706">
+<node TEXT="access token with claims" ID="ID_70049385" CREATED="1521802195369" MODIFIED="1521802200937"/>
+<node TEXT="Authorization: Bearer &lt;JWT&gt;" ID="ID_691236616" CREATED="1521802213307" MODIFIED="1521802218885">
+<node TEXT="header, payload, signature" ID="ID_1147067082" CREATED="1521802233365" MODIFIED="1521802237600"/>
 </node>
-<node TEXT="JWT" POSITION="left" ID="ID_296029072" CREATED="1521798613695" MODIFIED="1521798615036">
-<edge COLOR="#ff00ff"/>
+<node TEXT="HMAC-SHA256" ID="ID_1416717681" CREATED="1521802273801" MODIFIED="1521802282076">
+<node TEXT="hash with secret key to compute signature" ID="ID_317345740" CREATED="1521802282374" MODIFIED="1521802299474"/>
+</node>
+</node>
+<node TEXT="Stateless data api data repassed from client" ID="ID_859576747" CREATED="1521802350718" MODIFIED="1521802372015">
+<node TEXT="instead of traditional session on server" ID="ID_682887574" CREATED="1521802440171" MODIFIED="1521802446803"/>
+</node>
+<node TEXT="Usage" ID="ID_916340211" CREATED="1521802388767" MODIFIED="1521802390018">
+<node TEXT="Authentication" ID="ID_1042169253" CREATED="1521802390390" MODIFIED="1521802393610"/>
+<node TEXT="Secure information exchange" ID="ID_1328876543" CREATED="1521802394775" MODIFIED="1521802404094">
+<node TEXT="signed with public/private keys verify content was not tampered" ID="ID_1897300858" CREATED="1521802404527" MODIFIED="1521802429602"/>
+</node>
+</node>
+</node>
 </node>
 <node TEXT="API Keys" POSITION="right" ID="ID_1761925263" CREATED="1521798847902" MODIFIED="1521798849907">
 <edge COLOR="#00ffff"/>
 <node TEXT="identify caller/application" ID="ID_618916606" CREATED="1521798864030" MODIFIED="1521798874086"/>
-<node TEXT="monetize api" ID="ID_1401152652" CREATED="1521798890579" MODIFIED="1521798892921"/>
+<node TEXT="monetize api" LOCALIZED_STYLE_REF="default" FOLDED="true" ID="ID_1401152652" CREATED="1521798890579" MODIFIED="1521811282694">
+<node TEXT="jkhjkhjkhkjhkhkhjkhkj&#xa;sdkjfslkfjklsdjfkls&#xa;skdjhfskjfhkjshfdkjs&#xa;sakdjfhskjdfhkjsdhf" LOCALIZED_STYLE_REF="defaultstyle.details" ID="ID_177932329" CREATED="1521811097163" MODIFIED="1521811157747" HGAP_QUANTITY="-45.999998211860714 pt" VSHIFT_QUANTITY="41.24999877065424 pt"/>
+</node>
+</node>
+<node TEXT="Resources" POSITION="left" ID="ID_535890336" CREATED="1521802246610" MODIFIED="1521802249735">
+<edge COLOR="#7c0000"/>
+<node TEXT="dzone rest security refcardz" ID="ID_354057718" CREATED="1521802250831" MODIFIED="1521802258109"/>
 </node>
 </node>
 </map>

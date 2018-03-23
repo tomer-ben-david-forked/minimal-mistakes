@@ -1,7 +1,19 @@
 ---
 title: Startup Stack - tutorials, videos, books
-permalink: startup-stack-resources
+permalink: startup-primer
 ---
+
+## Run jekyll with docker
+```bash
+## Run jekyll with docker
+
+export JEKYLL_VERSION=3.5
+docker run --rm \
+  --volume="$PWD:/srv/jekyll" \
+  -p 4000:4000 \
+  -it jekyll/builder:$JEKYLL_VERSION \
+  jekyll serve
+```
 
 ## Domain names
 1. [https://tld-list.com/ - compare domain name renewal price](https://tld-list.com/)
@@ -28,6 +40,7 @@ permalink: startup-stack-resources
 
 ## UI and graphic design
 
+1. [logo design shapefactory](https://shapefactory.co/)
 1. [https://crello.com - your own graphical designer](https://crello.com)
 1. [https://pixabay.com](https://pixabay.com)
 1. [https://unsplash.com/](https://unsplash.com/)

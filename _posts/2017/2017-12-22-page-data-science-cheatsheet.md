@@ -10,13 +10,6 @@ permalink: datascience-cheatsheet
 
 **General Terms**
 
-```bash
-Spreadsheet           # => Think of data as spreadsheet
-Statistical learning  # => Output = f(input) # => f(inputVariable) or f(inputVector), or f(independent variables) or Y = F(X) // X1,X2,..
-Programming learning  # => OutputAttributes = Program(InputAttributes) or Program(InputFeatures) or Model = Algorithm(Data)
-Error                 # => Y = f(X) + e # => You learn a function!
-```
-
 | **Spark Term**                                               | **Description**                                              |
 | ------------------------------------------------------------ | ------------------------------------------------------------ |
 | Spreadsheet                                                  | Think of data as spreadsheet                                 |
