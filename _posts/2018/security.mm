@@ -81,7 +81,39 @@
 <node TEXT="XML" ID="ID_481214290" CREATED="1521798905967" MODIFIED="1521798907108"/>
 <node TEXT="Parties" ID="ID_1536369800" CREATED="1521799064763" MODIFIED="1521799066204">
 <node TEXT="Service provider" ID="ID_473544859" CREATED="1521799053763" MODIFIED="1521799061517"/>
-<node TEXT="Identity provider" LOCALIZED_STYLE_REF="defaultstyle.details" ID="ID_1467783301" CREATED="1521799073086" MODIFIED="1521813522489"/>
+<node TEXT="Identity provider" LOCALIZED_STYLE_REF="defaultstyle.details" ID="ID_1467783301" CREATED="1521799073086" MODIFIED="1521812402410"><richcontent TYPE="NOTE">
+
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      ```bash
+    </p>
+    <p>
+      git config --system # =&gt; /etc/gitconfig
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      git config --global # =&gt; ~/.gitconfig or ~/.config/git/config
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      git config --local # =&gt; .git/config
+    </p>
+    <p>
+      ```
+    </p>
+  </body>
+</html>
+
+</richcontent>
+</node>
 </node>
 <node TEXT="Provides Standard SSO" ID="ID_1196888693" CREATED="1521799095732" MODIFIED="1521799102711">
 <node TEXT="Authentication exchanged with digitally signed XML" ID="ID_1050738871" CREATED="1521799111374" MODIFIED="1521799130045"/>

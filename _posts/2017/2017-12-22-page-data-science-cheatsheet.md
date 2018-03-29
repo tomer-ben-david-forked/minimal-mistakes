@@ -27,7 +27,7 @@ permalink: datascience-cheatsheet
 | Stochastic Gradiant Descent                                  | Have large amounts of data, update to coefficients is foe each training instance, not in batch, as we have random data we move quickly. |
 | Matrix                                                       | rows: observations, our datadata. columns - features.  Get used to it. |
 | Sparse Matrix                                                | matrix who's most rows are zeros                             |
-| Classification vs Regression                                 | classification(input) => spam/notspam (categorical)<br />regression(input) => bitcoin price (continous outcome) |
+| Classification vs Regression                                 | classification(input) => spam/notspam (categorical)<br />regression(input) => bitcoin price (continous outcome)........ |
 | Preprocessing                                                | Cleanup data, stem                                           |
 | Step 1: Observe                                              | Observe the data, see what it is do some plotting            |
 | Step 2: PreprocFilter                                        | Casing, Puncutation, Numbers, Stop words, Symbols, Stemming  |
